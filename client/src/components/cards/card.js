@@ -6,12 +6,6 @@ function Card(props){
         backgroundColor: 'rgba(255, 255, 255, .4)'
     }
 
-    // function handleClick(item, to){
-    //     console.log('TO: ', to);
-    //     props.setActive(props.item);
-    //     props.history.push(to);
-    // }
-
     const { title, subtitle, text} = props.item;
     
     return (
