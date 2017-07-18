@@ -3,8 +3,6 @@ import * as prototypes from '../components/instructions/prototypes';
 import * as projects from '../components/instructions/projects';
 
 export function getAll(loc){
-    console.log('Loc', loc);
-
     let payload = prototypes;
     if(loc === '/projects'){
         payload = projects;
@@ -17,7 +15,8 @@ export function getAll(loc){
 }
 
 export function setActive(path){
-    const selected = prototypes[pathToKey(path)];
+    const key = pathToKey(path);
+    const selected = prototypes[key] || projects[key];
 
     if(!selected){
         return {

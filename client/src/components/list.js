@@ -10,18 +10,16 @@ class List extends Component {
     }
 
     render(){
-        const { url } = this.props.match;
+        const { match: { url }, all } = this.props;
 
         let listJSX = <EmptyCard title="Loading..."/>;
 
-        console.log('ALL:', this.props.all);
-
-        if(this.props.all){
-            // TODO: check for empty object
-            listJSX = <EmptyCard title="No Projects at this time"/>;
-            if(url === '/prototypes'){
-                listJSX = Object.keys(this.props.all).map((key, index) => {
-                    const item = this.props.all[key]
+        if(all){
+            if(Object.keys(all).length === 0){
+                listJSX = <EmptyCard title="No items at this time"/>;
+            } else {
+                listJSX = Object.keys(all).map((key, index) => {
+                    const item = all[key]
                     const to = `${url}/${item.to}`;
                     return <Card {...this.props} item={item} key={index} to={to} />
                 });

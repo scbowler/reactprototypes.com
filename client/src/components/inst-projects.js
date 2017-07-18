@@ -23,8 +23,8 @@ class Instructions extends Component {
         const { title, component } = this.props.current;
         return (
             <div>
-                <h1>This is the instruction page for {title}</h1>
-                <Link to="/prototypes">&lt;&lt; Go Back</Link>
+                <h1>Project: {title}</h1>
+                <Link to="/projects">&lt;&lt; Go Back</Link>
                 {component()}
             </div>
         )
@@ -32,7 +32,6 @@ class Instructions extends Component {
 }
 
 function mapStateToProps(state){
-    console.log('State:', state);
     return {
         current: state.inst.current,
         redirect: state.inst.redirect
