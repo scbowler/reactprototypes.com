@@ -14,7 +14,7 @@ function Card(props){
                 <h4 className="card-title">{title}</h4>
                 <h6 className="card-subtitle mb-2 text-muted">{subtitle}</h6>
                 <p className="card-text">{text}</p>
-                <Link to={props.to} >View Instructions</Link>
+                <Link className="btn btn-outline-white" to={props.to} >View Instructions</Link>
             </div>
         </div>
     )

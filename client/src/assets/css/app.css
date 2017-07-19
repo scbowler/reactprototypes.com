@@ -26,3 +26,16 @@ header h1 {
 header h3 {
     color: #eee;
 }
+
+.btn-outline-white {
+    color: white;
+    background-image: none;
+    background-color: transparent;
+    border-color: white;
+}
+
+.btn-outline-white:hover {
+    color: #888;
+    background-color: white;
+    border-color: white;
+}
