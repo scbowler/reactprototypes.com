@@ -1,0 +1,25 @@
+.instruction-body {
+    font-size: 1.2em;
+    padding: 15px 0 30px;
+}
+
+.instruction-body > h1 {
+    color: #eee;
+}
+
+.instruction-body > h1 > span {
+    color: white;
+}
+
+.instruction-body li {
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+
+.instruction-body ol>li>ol {
+    list-style: lower-alpha;
+}
+
+.instruction-body ol>li>ol>li>ol {
+    list-style: lower-roman;
+}

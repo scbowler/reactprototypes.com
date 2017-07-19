@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setActive } from '../actions';
+import '../assets/css/instructions.css';
 
 class Instructions extends Component {
 
     componentWillMount(){
+        window.scrollTo(0, 0);
         this.props.setActive(this.props.match.params.name);
     }
 
@@ -22,9 +24,11 @@ class Instructions extends Component {
 
         const { title, component } = this.props.current;
         return (
-            <div>
-                <h1>Project: {title}</h1>
-                <Link to="/projects">&lt;&lt; Go Back</Link>
+            <div className="instruction-body">
+                <h1>Project <span>{title}</span></h1>
+                <div className="d-flex justify-content-end">
+                    <Link className="btn btn-outline-white mb-2" to="/projects">Go Back</Link>
+                </div>
                 {component()}
             </div>
         )
