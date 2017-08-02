@@ -39,3 +39,7 @@ header h3 {
     background-color: white;
     border-color: white;
 }
+
+.btn-outline-secondary:hover {
+    cursor: pointer;
+}
