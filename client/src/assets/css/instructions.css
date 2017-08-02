@@ -28,4 +28,5 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(80, 80, 80, .2);
+    max-width: 100%;
 }
