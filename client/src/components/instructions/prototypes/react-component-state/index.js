@@ -32,7 +32,7 @@ export default function(){
                 <ol>
                     <li><b>Related Slides</b>
                         <ul>
-                            <li><a href="https://docs.google.com/presentation/d/1F6rdoAxBdRnVR_1u4vBDvQDcWml25vSn-Slr6lv0Ajo/pub?start=false&loop=false&delayms=3000">React Component State</a></li>
+                            <li><a href="https://docs.google.com/presentation/d/1F6rdoAxBdRnVR_1u4vBDvQDcWml25vSn-Slr6lv0Ajo/pub?start=false&loop=false&delayms=3000" target="_blank">React Component State</a></li>
                         </ul>
                     </li>
                     <li><b>Feature Set 1</b>
@@ -67,7 +67,7 @@ export default function(){
                     </li>
                     <li><b>Feature Set 7</b>
                         <ul>
-                            <li>This feature set is also optional. Here you will fix an issue with the start button to make it behave in a more apropriate and expected version</li>
+                            <li>This feature set is also optional. Here you will fix an issue with the start button to make it behave in a more appropriate and expected manor</li>
                         </ul>
                     </li>
                     <li><b>Extras</b>
@@ -76,11 +76,12 @@ export default function(){
                         </ul>
                     </li>
                     <li><b>Demo:</b>
+                        <h1 className="text-center">Stopwatch</h1>
                         <Stopwatch/>
                     </li>
                 </ol>
             </Card>
-            <Card title="1" subtitle="Setting up the &lt;App&gt; component... Yes again">
+            <Card title="1" subtitle="Set up the &lt;App/&gt; component... Yes again">
                 <p>In the <code>src/components/app.js</code> file do the following:</p>
                 <ol>
                     <li>Import React
@@ -109,7 +110,7 @@ export default function(){
                     <img src={appRender1} className="img-pop"/>
                 </div>
             </Card>
-            <Card title="2" subtitle="The First class component">
+            <Card title="2" subtitle="Build your first class component: &lt;Stopwatch/&gt;">
                 <ol>
                     <li>In the <code>src/components</code> folder create a new file called <code>stopwatch.js</code></li>
                 </ol>
@@ -119,9 +120,9 @@ export default function(){
                     <li>Import React and Component (<i>remember put Component inside</i> &#123; &#125; )
                         <Code html={examples.importReactComponent} noHide/>
                     </li>
-                    <li>Create a <i>class</i> named <code>Stopwatch</code></li>
+                    <li>Create a <i>class</i> named <code>Stopwatch</code> that <code>extends</code> <code>Component</code></li>
                     <li>Add a render method to the <code>Stopwatch</code> class</li>
-                    <li>The render method should return a <code>&lt;div&gt;</code> with a <code>&lt;h3&gt;</code> inside that contains the text "<i>This will be the stopwatch</i>"
+                    <li>The render method should return a <code>&lt;div&gt;</code> with a <code>&lt;h3&gt;</code> inside that contains the text: "<i>This will be the stopwatch</i>"
                         <ul>
                             <li><b>NOTE:</b> We are just adding some temporary content so we can test the component</li>
                         </ul>
@@ -142,9 +143,9 @@ export default function(){
                 <p>After completing the above you should see the following in the browser:</p>
                 <img src={appRender2} className="img-pop"/>
             </Card>
-            <Card title="3" subtitle="Adding state and counting the milliseconds">
+            <Card title="3" subtitle="Add state to count the milliseconds">
                 <p>To create a stopwatch (<i>a timer that counts up from zero</i>) the <code>&lt;Stopwatch&gt;</code> component will need to know a few things. Firstly the component will need to know if it is <code>running</code> or <code>stopped</code>. Next it needs to know how much time has passed since the timer was started so it'll need to know when it was started and how much time has elapsed. For the component to know all these things we will store the information into <code>state</code>.</p>
-                <p>We will start with adding a <code>constructor</code> method to the <code>&lt;Stopwatch&gt;</code> component. We will add three properties to state <code>status</code>, <code>start</code>, and <code>elapsed</code></p>
+                <p>We will start with adding a <code>constructor</code> method to the <code>&lt;Stopwatch&gt;</code> component. We will add three properties to state: <code>status</code>, <code>start</code>, and <code>elapsed</code></p>
                 <p>In the <code>src/components/stopwatch.js</code> file do the following:</p>
                 <ol>
                     <li>In the <code>Stopwatch</code> class create a <code>constructor</code> method
@@ -162,7 +163,7 @@ export default function(){
                         </ol>
                         <Code html={examples.example6}/>
                     </li>
-                    <li>In the <code>render</code> method use destructuring to create variables for <code>elapsed</code> and <code>status</code> from <code>state</code>
+                    <li>In the <code>render</code> method use destructuring to create constants for <code>elapsed</code> and <code>status</code> from <code>state</code>
                         <Code html={examples.example7}/>
                     </li>
                     <li>Still in the <code>render</code> method, in the <code>return</code>:
@@ -288,7 +289,7 @@ export default function(){
                 </ol>
                 <Code html={examples.example22} text={{show: 'View complete stopwatch.js example', hide: 'Hide Example'}} confirm/>
             </Card>
-            <Card title="4" subtitle="Formatting the time... there will be math!">
+            <Card title="4" subtitle="Format the time... there will be math!">
                 <p>As it stands now our timer output is in milliseconds and is not very human readable. We want to take the milliseconds and convert it to something that is actually useful, something like <code>0:0:0.0</code> which translates to <code>hour:min:sec.ms</code></p>
                 <p>We will create a new Component that will handle this conversion for us</p>
                 <ol>
@@ -387,7 +388,7 @@ export default function(){
                     </li>
                 </ol>
             </Card>
-            <Card title="5" subtitle="Making this look good">
+            <Card title="5" subtitle="Use Bootstrap to make this look good">
                 <p>Now that we have a functional timer we can style it. We will be using Bootstrap to style the timer.</p>
                 <p>In the <code>src/components/stopwatch.js</code> file do the following:</p>
                 <ol>
@@ -418,7 +419,7 @@ export default function(){
                     <li>In the <code>return</code> of the <code>render</code> method add the <code>text-center</code> class to the <code>&lt;div&gt;</code></li>
                     <li>Test your app
                         <ul>
-                            <li>Because the time string slightly changes size as the timer runs it causes it to bounce and give a ghosting effect when using <code>text-center</code>. This is most likely not a desired effect so this is not the best solution</li>
+                            <li>Because the time string slightly changes size as the timer runs it causes it to bounce and give a ghosting effect when using <code>text-center</code>. This most likely is not a desired effect so this is not the best solution</li>
                         </ul>
                     </li>
                     <li>In the <code>constructor</code> method we will create a style object to help us center the timer
@@ -494,7 +495,7 @@ export default function(){
                 <Code html={examples.example49} text={{show: 'View Full format_time.js Example', hide: 'Hide Example'}} confirm/>
                 <Code html={examples.example50} text={{show: 'View Full format_time.js Advanced Example', hide: 'Hide Example'}} title="Just FYI" message={<div>This example utilizes some more advanced concepts <br/> but accomplishes the exact same result as the above example</div>} confirm/>
             </Card>
-            <Card title="7" subtitle="Fix the start button" optional>
+            <Card title="7" subtitle="Fix the start button functionality" optional>
                 <p>Right now every time you click the start button the timer resets. It would be nice if we could stop the timer and then resume it again by clicking start</p>
                 <p>In the <code>src/components/stopwatch.js</code> file do the following:</p>
                 <p>Everything in this feature set will be inside the <code>start</code> method within the <code>Stopwatch</code> class</p>
@@ -528,6 +529,7 @@ export default function(){
                     <li>Add additional styles to improve the look of the timer</li>
                     <li>Allow the user to enter a specific amount of time and have the timer count down to zero</li>
                     <li>Display the time text in a different format</li>
+                    <li>Utilize the <code>leadingZero</code> and <code>trailingZero</code> methods in the <code>componentWillReceiveProps</code> method instead of the <code>render</code> method</li>
                 </ol>
             </Card>
         </div>
