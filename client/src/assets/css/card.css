@@ -1,0 +1,29 @@
+.card { 
+    overflow: hidden;
+}
+
+.card .card-badge {
+    display: inline-block;
+    position: absolute;
+    right: -28px;
+    top: 63px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    color: white;
+    width: 300px;
+    text-align: center;
+    transform: rotate(45deg);
+}
+
+@media screen and (max-width: 767px){
+    .card .card-badge {
+        font-size: 10px;
+        padding: 2px;
+        width: 146px;
+        bottom: 35px;
+        top: unset;
+        right: -29px;
+        transform: rotate(-45deg);
+    }
+}

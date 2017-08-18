@@ -16,7 +16,7 @@ export const reactComponents = {
     title: 'React Functional Components',
     subtitle: '002',
     text: 'An introduction to basic React functional components',
-    to: 'react-components'
+    to: 'react-components',
 };
 
 export const reactComponentState = {
@@ -24,7 +24,8 @@ export const reactComponentState = {
     title: 'React Class Components with State',
     subtitle: '003',
     text: 'An introduction to class based components and component state',
-    to: 'react-component-state'
+    to: 'react-component-state',
+    badge: ''
 };
 
 export const reactInputsForms = {
@@ -32,5 +33,10 @@ export const reactInputsForms = {
     title: 'React Handling Inputs / Forms',
     subtitle: '004',
     text: 'Utilizing component state to handle inputs / forms',
-    to: 'react-inputs-forms'
+    to: 'react-inputs-forms',
+    badge: {
+        color: 'yellow',
+        opacity: .5,
+        text: 'Coming Soon!'
+    }
 };
