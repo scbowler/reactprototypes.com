@@ -5,5 +5,10 @@ export const guessingGame = {
     title: 'Guessing Game',
     subtitle: '001',
     text: 'Re creating the guessing game you created earlier in the class using React',
-    to: 'guessing-game'
+    to: 'guessing-game',
+    badge: {
+        color: 'yellow',
+        opacity: .5,
+        text: 'Coming Soon!'
+    }
 };
