@@ -44,7 +44,7 @@ class Code extends Component {
         const { text, title, message } = this.props;
         const { showCode, showModal } = this.state;
 
-        const btnText = text ? text : {show: 'Show hint', hide: 'Hide Hint'};
+        const btnText = text ? text : {show: 'Show Hint', hide: 'Hide Hint'};
         return (
             <div className="code-hint">
                 <button className={`my-2 btn btn-sm btn-outline-${showCode ? 'warning' : 'secondary' }`} onClick={() => this.toggleCode()}>{showCode ? btnText.hide : btnText.show}</button>
