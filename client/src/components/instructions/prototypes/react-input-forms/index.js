@@ -4,6 +4,8 @@ import Card from '../../../cards/instruction-card';
 import Code from '../../../code';
 import Cc from '../../../code_component';
 import examples from './examples';
+import ContactDemo from './demo/contact_demo';
+import overview1 from './imgs/overview1.png';
 import appRender1 from './imgs/appRender1.png';
 import appRender2 from './imgs/appRender2.png';
 import appRender3 from './imgs/appRender3.png';
@@ -17,6 +19,8 @@ import appRender10 from './imgs/appRender10.png';
 import appRender11 from './imgs/appRender11.png';
 import appRender12 from './imgs/appRender12.png';
 import appRender13 from './imgs/appRender13.png';
+import appRender14 from './imgs/appRender14.png';
+import appRender15 from './imgs/appRender15.png';
 import console1 from './imgs/console1.png';
 import console2 from './imgs/console2.png';
 import console3 from './imgs/console3.png';
@@ -26,11 +30,66 @@ import console6 from './imgs/console6.png';
 import console7 from './imgs/console7.png';
 import console8 from './imgs/console8.png';
 import console9 from './imgs/console9.png';
+import console10 from './imgs/console10.png';
 
 export default function(){ 
     return (
         <div>
             <Intro branch="forms-inputs"/>
+            <Card title="Overview" subtitle="What you'll be building in this prototype">
+                <p>In the <b>inputs and forms</b> prototype you will be building a contact list that displays you contacts info in a card and has a form to allow you to add additional contacts. This prototype will introduce you to using "dummy" data and utilizing a form to add to your existing data.</p>
+                <ol>
+                    <li><b>Related Slides</b>
+                        <ul>
+                            <li><a href="https://docs.google.com/presentation/d/e/2PACX-1vSTcvN0h8KaAI6H_K_kxYble2DaNUM9Fjs-gMdPxDIZMUY-ikMgqmORlJe8B9J_QjIYDBX9R9TkCIzw/pub?start=false&loop=false&delayms=3000" target="_blank">Component State - Inputs</a></li>
+                        </ul>
+                    </li>
+                    <li><b>Feature Set 1</b>
+                        <ul>
+                            <li>You will build the initial <Cc>App/</Cc> component, from which the entire application will build from</li>
+                        </ul>
+                    </li>
+                    <li><b>Feature Set 2</b>
+                        <ul>
+                            <li>Create a component that will display a contact's information. Build dummy data to test the newly created <Cc>ContactCard/</Cc> component</li>
+                        </ul>
+                    </li>
+                    <li><b>Feature Set 3</b>
+                        <ul>
+                            <li>Utilize Bootstrap 4 classes to display a contact's information in a "card" format
+                                <img src={overview1} className="img-pop"/>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><b>Feature Set 4</b>
+                        <ul>
+                            <li>Build a basic form that has two inputs, one for a contact's first name and one for a contact's second name</li>
+                        </ul>
+                    </li>
+                    <li><b>Feature Set 5</b>
+                        <ul>
+                            <li>Create a new <Cc>Field/</Cc> component to make it easier to add inputs to the contact from. Utilize the <Cc>Field/</Cc> component to add two additional inputs to the add contact form.</li>
+                        </ul>
+                    </li>
+                    <li><b>Feature Set 6</b>
+                        <ul>
+                            <li>Bring everything together by having the contact form add a contact to the <code>contactData</code> array</li>
+                        </ul>
+                    </li>
+                    <li><b>Feature Set 7</b>
+                        <ul>
+                            <li>In this optional feature set you will create a <code>reset</code> method for the contact form so you can clear the form with a button or after the form is submitted</li>
+                        </ul>
+                    </li>
+                    <li><b>Extras</b>
+                        <ul>
+                            <li>A list of extra things you can do to improve your Address Book app</li>
+                        </ul>
+                    </li>
+                    <li><b>Demo:</b></li>
+                </ol>
+                <ContactDemo/>
+            </Card>
             <Card title="Feature Set 1" subtitle="Making the &lt;App/&gt; component">
                 <p>In the <code>src/components/app.js</code> file do the following:</p>
                 <ol>
@@ -233,7 +292,7 @@ export default function(){
                 </ol>
                 <Code html={examples.example24} text={{show: 'View src/components/app.js Example', hide: 'Hide app.js Example'}} confirm/>
                 <p>If all is going well so far, you should see something like this in your browser:</p>
-                <img src={appRender4} className="img-pop"/>
+                <img src={appRender4} className="img-pop mb-3"/>
                 <p>The last things we need to do is pass all of each contact's information to <code>ContactCard</code> then utilize that information inside of <code>ContactCard</code></p>
                 <p>In the <code>src/components/contact_list.js</code> file do the following:</p>
                 <ol>
@@ -460,6 +519,7 @@ export default function(){
                             <li><code>name</code> set to <code>"firstName"</code></li>
                             <li><code>label</code> set to <code>"First Name"</code></li>
                             <li><code>type</code> set to <code>"text"</code></li>
+                            <li><code>value</code> set to <code>&#123;firstName&#125;</code></li>
                             <li><code>onChange</code> set to <code>&#123;this.handleInputChange&#125;</code></li>
                         </ul>
                         <Code html={examples.example63}/>
@@ -490,11 +550,22 @@ export default function(){
                 <p>Now that the <code>&lt;Field&gt;</code> component is working we can utilize it to add the other three inputs: <code>lastName</code>, <code>phone</code>, and <code>email</code></p>
                 <p>In the <code>src/components/contact_form.js</code> file do the following:</p>
                 <ol>
+                    <li>In the <code>constructor</code> method add the following properties to the <code>form</code> object in <code>this.state</code>:
+                        <ul>
+                            <li><code>phone</code> set to <code>''</code></li>
+                            <li><code>email</code> set to <code>''</code></li>
+                        </ul>
+                        <Code html={examples.example68}/>
+                    </li>
+                    <li>In the <code>render</code> method where we are utilizing destructuring to create constants for <code>firstName</code> and <code>lastName</code> add in <code>phone</code> and <code>email</code>
+                        <Code html={examples.addPhoneEmail}/>
+                    </li>
                     <li>In the <code>return</code> of the <code>render</code> method add another <code>&lt;Field/&gt;</code> component below the one for <code>firstName</code>. Give it the following <code>props</code>:
                         <ul>
                             <li><code>name</code> set to <code>"lastName"</code></li>
                             <li><code>label</code> set to <code>"Last Name"</code></li>
                             <li><code>type</code> set to <code>"text"</code></li>
+                            <li><code>value</code> set to <code>&#123;lastName&#125;</code></li>
                             <li><code>onChange</code> set to <code>&#123;this.handleInputChange&#125;</code></li>
                         </ul>
                     </li>
@@ -503,6 +574,7 @@ export default function(){
                             <li><code>name</code> set to <code>"phone"</code></li>
                             <li><code>label</code> set to <code>"Phone Number"</code></li>
                             <li><code>type</code> set to <code>"tel"</code></li>
+                            <li><code>value</code> set to <code>&#123;phone&#125;</code></li>
                             <li><code>onChange</code> set to <code>&#123;this.handleInputChange&#125;</code></li>
                         </ul>
                     </li>
@@ -511,25 +583,21 @@ export default function(){
                             <li><code>name</code> set to <code>"email"</code></li>
                             <li><code>label</code> set to <code>"Email"</code></li>
                             <li><code>type</code> set to <code>"email"</code></li>
+                            <li><code>value</code> set to <code>&#123;email&#125;</code></li>
                             <li><code>onChange</code> set to <code>&#123;this.handleInputChange&#125;</code></li>
-                        </ul>
+                                        </ul>
                     </li>
                 </ol>
-                <Code html={examples.example67} text={{show: 'View Complete render Method Exxample', hide: 'Hide Example'}} confirm/>
-                <ol start="4">
-                    <li>In the <code>constructor</code> method add the following properties to the <code>form</code> object in <code>this.state</code>:
-                        <ul>
-                            <li><code>phone</code> set to <code>''</code></li>
-                            <li><code>email</code> set to <code>''</code></li>
-                        </ul>
-                        <Code html={examples.example68}/>
-                    </li>
+                <Code html={examples.example67} text={{show: 'View Complete render Method Example', hide: 'Hide Example'}} confirm/>
+                <ol start="6">
                     <li>Test your code. You should now be able to put info in all the inputs then see it printed in the <code>console</code> after the <code>Add Contact</code> button is clicked
                         <img src={appRender12} className="img-pop my-3"/>
                         <p className="my-3">After the <code>Add Contact</code> button is clicked you should see the form values logged in the <code>console</code></p>
                         <img src={console9} className="img-pop"/>
                     </li>
                 </ol>
+            </Card>
+            <Card title="6" subtitle="Add contacts to the contact list">
                 <p>Now that we have a fully functional contact form it's time to actually start adding the new data to the <code>contactData</code> array. However there is a problem, as it stands right now <Cc>ContactList/</Cc> is the owner of the <code>contactData</code> array. The problem is that <Cc>ContactList/</Cc> and <Cc>ContactForm</Cc> are siblings so there is no direct line of communication between them. The best and easiest way to solve this is to lift the <code>state</code> up to the <Cc>App/</Cc> component. So now we will import our "dummy data" into the <Cc>App/</Cc> component instead of <Cc>ContactList</Cc>. By lifting the <code>state</code> up to <Cc>App/</Cc> now both <Cc>ContactList/</Cc> and <Cc>ContactForm/</Cc> will have access to the <code>contactData</code> array.</p>
                 <p>In the <code>src/components/contact_list.js</code> file do the following:</p>
                 <ol>
@@ -547,7 +615,7 @@ export default function(){
                 <Code html={examples.example71} text={{show: 'View Updated src/components/contact_list.js Example', hide: 'Hide Example'}} confirm/>
                 <p>In the <code>src/components/app.js</code> file do the following:</p>
                 <ol>
-                    <li>Convert the <Cc>App/</Cc> component into a <code>class</code> component. Don't forget to add <code>&#123;Component#125;</code> to the <code>import statement at the top of the page</code>
+                    <li>Convert the <Cc>App/</Cc> component into a <code>class</code> component. Don't forget to add <code>&#123;Component&#125;</code> to the <code>import</code> statement at the top of the page
                         <Code html={examples.example72}/>
                     </li>
                     <li>At the top of the file <code>import</code> <code>contactData</code> from <code>../data/contacts</code>
@@ -559,19 +627,115 @@ export default function(){
                             <li>In the <code>constructor</code> method call the <code>super</code> method and pass in <code>props</code> as an argument</li>
                             <li>Create the <code>this.state</code> object and give it the following property:
                                 <ul>
-                                    <li><code>contacts</code> se to <code>contactData</code></li>
+                                    <li><code>contacts</code> set to <code>contactData</code></li>
                                 </ul>
                             </li>
                         </ol>
-                        <Code html={examples.example72}/>
+                        <Code html={examples.example74}/>
                     </li>
                     <li>In the <code>return</code> of the <code>render</code> method add a <code>prop</code> to the <Cc>ContactList/</Cc> component called <code>contacts</code> set to <code>this.state.contacts</code>
-                        <Code html={examples.example74}/>
+                        <Code html={examples.example75}/>
                     </li>
                 </ol>
                 <p>Test your code, your app should work again.</p>
                 <img src={appRender13} className="img-pop"/>
                 <Code html={examples.example76} text={{show: 'View src/components/app.js Example', hide: 'Hide Example'}}  confirm/>
+                <p>Still in the <code>src/components/app.js</code> file do the following:</p>
+                <ol>
+                    <li>Create an <code>addContact</code> method inside the <code>App</code> class
+                        <ol>
+                            <li><code>addContact</code> should take a single parameter named <code>contact</code></li>
+                            <li>Add a <code>console.log</code> to <code>addContact</code>. Log out <code>contact</code>
+                                <Code html={examples.example77} noHide/>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>In the <code>constructor</code> method <code>bind</code> <code>this</code> to <code>addContact</code>
+                        <Code html={examples.example78}/>
+                    </li>
+                    <li>In the <code>return</code> of the <code>render</code> method add a <code>prop</code> to <Cc>ContactForm/</Cc> called <code>add</code> set it to <code>this.addContact</code>
+                        <Code html={examples.example79}/>
+                    </li>
+                </ol>
+                <p>In the <code>src/components/contact_form.js</code> file do the following:</p>
+                <ol>
+                    <li>In the <code>handleSubmit</code> method call <code>this.props.add</code> pass in <code>this.state.form</code> as an argument
+                        <Code html={examples.example80}/>
+                    </li>
+                    <li>Test your code. Fill out the form and submit it. Now in the <code>console</code> you should see two <code>console.log</code>s, the first one is from the <Cc>ContactForm/</Cc> <code>handleSubmit</code> method and the second one is from the <Cc>App/</Cc> <code>addContact</code> method
+                        <img src={console10} className="img-pop my-3"/>
+                    </li>
+                </ol>
+                <p>Now that we have the contact form communicating with the app component we can update the <code>addContact</code> method in the <Cc>App/</Cc> component</p>
+                <p>In the <code>src/components/app.js</code></p>
+                <ol>
+                    <li>In the <code>addContact</code> method use <code>this.setState</code> to add the new <code>contact</code> to the <code>this.state.contacts</code> array. Below are two options for updating <code>state</code>, choose only one.
+                        <ul>
+                            <li>You can use destructuring to create a new array and add in <code>contact</code>
+                                <Code html={examples.example81} text={{show: 'View example using destructuring', hide: 'Hide destructuring example'}}/>
+                            </li>
+                            <li>Another option is to use <code>slice</code> to create a new array then use <code>unshift</code> or <code>push</code> to add the new <code>contact</code> to the array
+                                <Code html={examples.example82} text={{show: 'View example using slice and unshift', hide: 'Hide slice/unshift example'}}/>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>You should now have a functional form that actually adds contacts to the list of contacts</p>
+                <img src={appRender14} className="img-pop"/>
+                <Code html={examples.example83} text={{show: 'View Full src/components/app.js Example', hide: 'Hide app.js Example'}} confirm/>
+                <Code html={examples.example84} text={{show: 'View Full src/components/contact_card.js Example', hide: 'Hide contact_card.js Example'}} confirm/>
+                <Code html={examples.example85} text={{show: 'View Full src/components/contact_form.js Example', hide: 'Hide contact_form.js Example'}} confirm/>
+                <Code html={examples.example86} text={{show: 'View Full src/components/contact_list.js Example', hide: 'Hide contact_list.js Example'}} confirm/>
+                <Code html={examples.example87} text={{show: 'View Full src/components/field.js Example', hide: 'Hide field.js Example'}} confirm/>
+            </Card>
+            <Card title="7" subtitle="Make the form reset" optional>
+                <p>In this optional feature set we will create a <code>reset</code> method for the form so we can add a <code>Clear Form</code> button and have the form reset after a contact has been added. Since all the inputs are controlled by <code>state</code>, the <code>reset</code> method will set <code>state</code> back to its starting values</p>
+                <p>In the <code>src/components/contact_form.js</code> file do the following:</p>
+                <ol>
+                    <li>In the <code>ContactForm</code> class add a method called <code>reset</code>
+                        <ul>
+                            <li><code>reset</code> will take no parameters</li>
+                        </ul>
+                    </li>
+                    <li>In the <code>reset</code> method use <code>this.setState</code> to set all the <code>form</code> values back to <code>''</code>
+                        <Code html={examples.example88}/>
+                    </li>
+                    <li>In the <code>constructor</code> method <code>bind</code> <code>this</code> to the <code>reset</code> method</li>
+                    <li>In the <code>return</code> of the <code>render</code> method add another <Cc>button</Cc> below the "Add Contact" <Cc>button</Cc>. Give it the text "Clear Form" and add the following <code>props</code>:
+                        <ul>
+                            <li><code>type</code> set to <code>"button"</code></li>
+                            <li><code>onClick</code> set to <code>&#123;this.reset&#125;</code></li>
+                        </ul>
+                        <Code html={examples.example89}/>
+                    </li>
+                    <li>Test your code. Add some text into all four inputs then click the "Clear Form" button, the form should clear. If the form doesn't clear revisit the steps for this feature set, or ask for help if you are stuck.</li>
+                    <li>Now that we have a working <code>reset</code> method we can utilize it in the <code>handleSubmit</code> method. At the the end of the <code>handleSubmit</code> method add a call to <code>this.reset</code>
+                        <Code html={examples.example90}/>
+                    </li>
+                    <li>Test your code, after submitting the form the form should clear itself.</li>
+                </ol>
+                <Code html={examples.example91}/>
+            </Card>
+            <Card title="Extras" subtitle="Some extra stuff you can try">
+                <p>Here is a list of some stuff you can add to this prototype for further practice</p>
+                <ol>
+                    <li>Clean up the code:
+                        <ol>
+                            <li>Convert <code>ContactList</code> to a functional component. It no longer needs to be a class component</li>
+                            <li>Remove all the <code>console.log</code>s</li>
+                            <li>Any other code clean up you can find</li>
+                        </ol>
+                    </li>
+                    <li>Add some Bootstrap classes to the buttons and other elements to add more style to the app</li>
+                    <li>Add inputs for a full address and update the <Cc>ContactCard/</Cc> component to display the full address of each contact. Below is an example of what you can do:
+                        <img src={appRender15} className="img-pop"/>
+                    </li>
+                    <li>Add in some error handling to prevent empty fields from being added</li>
+                    <li>Make the contacts searchable</li>
+                    <li>Make the contacts sortable</li>
+                    <li>Add delete functionality</li>
+                    <li>Make the contacts editable</li>
+                </ol>
             </Card>
         </div>
     )

@@ -12,7 +12,7 @@ import examples from './examples';
 export default function(){ 
     return (
         <div>
-            <Intro branch="change-me"/>
+            <Intro branch="styles-images"/>
             <Card title="Feature Set 1" subtitle="Something fun">
                 <ol>
                     <li>Coming Soon!</li>
