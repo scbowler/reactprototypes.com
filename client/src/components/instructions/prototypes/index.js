@@ -2,6 +2,7 @@ import ReactIntro from './react-intro';
 import ReactComponents from './react-components';
 import ReactComponentState from './react-component-state';
 import ReactInputState from './react-input-forms';
+import ReactStylesImages from './react-styles-images';
 
 export const reactIntro = {
     component: ReactIntro,
@@ -25,7 +26,6 @@ export const reactComponentState = {
     subtitle: '003',
     text: 'An introduction to class based components and component state',
     to: 'react-component-state',
-    badge: ''
 };
 
 export const reactInputsForms = {
@@ -34,6 +34,15 @@ export const reactInputsForms = {
     subtitle: '004',
     text: 'Utilizing component state to handle inputs / forms',
     to: 'react-inputs-forms',
+    badge: ''
+};
+
+export const reactStylesImages = {
+    component: ReactStylesImages,
+    title: 'React Handling Styling and Images',
+    subtitle: '005',
+    text: 'Learn to add styles to your react app in multiple ways and import images',
+    to: 'react-styles-images',
     badge: {
         color: 'yellow',
         opacity: .5,
