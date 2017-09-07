@@ -1,0 +1,45 @@
+.shake {
+    position: relative;
+    animation: shake 100ms linear infinite;
+}
+
+.user-input {
+    font-size: 2em;
+    text-align: center;
+}
+
+.blink-danger {
+    animation: blink-danger 3s linear infinite;
+}
+
+form button.btn:hover {
+    cursor: pointer;
+    animation: none;
+}
+
+@keyframes shake {
+    from {
+        left: 8px;
+    }
+
+    to {
+        right: 8px;
+    }
+}
+
+@keyframes blink-danger {
+    0% {
+        background-color: transparent;
+        color: #d9534f;
+    }
+    
+    15% {
+        background-color: #d9534f;
+        color: #fff;
+    }
+
+    30% {
+        background-color: transparent;
+        color: #d9534f;
+    }
+}
