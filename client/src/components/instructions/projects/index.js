@@ -6,9 +6,5 @@ export const guessingGame = {
     subtitle: '001',
     text: 'Create a simple number guessing game using React',
     to: 'guessing-game',
-    badge: {
-        color: 'yellow',
-        opacity: .5,
-        text: 'Coming Soon!'
-    }
+    badge: ''
 };
