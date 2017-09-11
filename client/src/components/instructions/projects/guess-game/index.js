@@ -11,9 +11,9 @@ export default function(){
                     <li>Fork the repo to your GitHub account</li>
                     <li>Open your terminal</li>
                     <li>In your terminal navigate to your <code>front_end</code> folder. (<i>your folder name may be slightly different</i>)</li>
-                    <li>Clone the <code>react_guess_game</code> from your account
+                    <li>Clone the <code>react_guess_game</code> project from your account
                         <ul>
-                            <li><code>git clone https://github.com[Your Username]/react_guess_game.git</code></li>
+                            <li><code>git clone https://github.com/[Your Username]/react_guess_game.git</code></li>
                         </ul>
                     </li>
                     <li>Change directories into the newly cloned react_guess_game project directory
