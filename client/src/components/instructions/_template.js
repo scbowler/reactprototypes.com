@@ -13,7 +13,7 @@ export default function(){
     return (
         <div>
             <Intro branch="change-me"/>
-            <Card title="Feature Set 1" subtitle="Something fun">
+            <Card title="1" subtitle="Something fun">
                 <ol>
                     <li>Coming Soon!</li>
                 </ol>

@@ -15,20 +15,20 @@ export default function(){
             <Card title="Getting Started" subtitle="Do this before starting">
                 <ol>
                     <li>In your terminal navigate to your <code>react_mboutique</code> project</li>
-                    <li>If you have not done so already add and commit your work from <code>MBoutique part 1</code> to the <code>home_page</code> branch
+                    <li>If you have not done so already add and commit your work from <code>MBoutique part 1</code> to the <code>home-page</code> branch
                         <ol>
                             <li><code>git add .</code></li>
                             <li><code>git commit -m "Completed home page"</code></li>
                         </ol>
                     </li>
-                    <li>Push the <code>home_page</code> branch to GitHub
+                    <li>Push the <code>home-page</code> branch to GitHub
                         <ul>
-                            <li><code>git push origin home_page</code></li>
+                            <li><code>git push origin home-page</code></li>
                         </ul>
                     </li>
-                    <li>In <b>your</b> <code>react_mboutique</code> repo on Github create a pull request from <code>home_page</code> to <code>master</code></li>
+                    <li>In <b>your</b> <code>react_mboutique</code> repo on Github create a pull request from <code>home-page</code> to <code>master</code></li>
                     <li>Merge the pull request</li>
-                    <li>After the merge finishes click the button that appears to delete the <code>home_page</code> branch</li>
+                    <li>After the merge finishes click the button that appears to delete the <code>home-page</code> branch</li>
                     <li>In your terminal switch to the <code>master</code> branch
                         <ul>
                             <li><code>git checkout master</code></li>
@@ -39,9 +39,9 @@ export default function(){
                             <li><code>git pull origin master</code></li>
                         </ul>
                     </li>
-                    <li>Delete the <code>home_page</code> branch
+                    <li>Delete the <code>home-page</code> branch
                         <ul>
-                            <li><code>git branch -d home_page</code></li>
+                            <li><code>git branch -d home-page</code></li>
                         </ul>
                     </li>
                     <li>Create a new branch named <code>routing</code>

@@ -7,7 +7,7 @@ export default function(){
     return (
         <div>
             <Card title="Overview" subtitle="What you'll be building in this prototype">
-                <p>The react-intro prototype is intended to help you set up the react-prototypes repo and give a gentle introduction to creating dynamic output using JSX. It is recommended to review the <a href="https://docs.google.com/presentation/d/e/2PACX-1vRaSQHssp3RZraQIwB9XGdpzVnHvtsEyNke5IXpk0F7PCJpB-rBK2vN2KVLY7_DC9HA4BZ2CFrfr8BU/pub?start=false&loop=false&delayms=3000" target="_blank">React Intro</a> slides before continuing if you have not already.</p>
+                <p>The react intro prototype is intended to help you set up the react-prototypes repo and give a gentle introduction to creating dynamic output using JSX. It is recommended to review the <a href="https://docs.google.com/presentation/d/e/2PACX-1vRaSQHssp3RZraQIwB9XGdpzVnHvtsEyNke5IXpk0F7PCJpB-rBK2vN2KVLY7_DC9HA4BZ2CFrfr8BU/pub?start=false&loop=false&delayms=3000" target="_blank">React Intro</a> slides before continuing if you have not already.</p>
                 <ol>
                     <li><b>Related Slides</b>
                         <ul>

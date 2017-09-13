@@ -29,9 +29,9 @@ export default function(){
                             <li><code>npm install</code></li>
                         </ul>
                     </li>
-                    <li>Create a new branch called <code>home_page</code>
+                    <li>Create a new branch called <code>home-page</code>
                         <ul>
-                            <li><code>git checkout -b home_page</code></li>
+                            <li><code>git checkout -b home-page</code></li>
                         </ul>
                     </li>
                     <li>Start React dev server
