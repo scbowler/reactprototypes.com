@@ -3,6 +3,7 @@ import ReactComponents from './react-components';
 import ReactComponentState from './react-component-state';
 import ReactInputState from './react-input-forms';
 import ReactStylesImages from './react-styles-images';
+import ReactRouting from './react-routing';
 
 export const reactIntro = {
     component: ReactIntro,
@@ -49,3 +50,12 @@ export const reactStylesImages = {
         text: 'Coming Soon!'
     }
 };
+
+export const reactRouting = {
+    component: ReactRouting,
+    title: 'React Routing with React Router v4',
+    subtitle: '006',
+    text: 'Create single page apps using React Router\'s dynamic routing',
+    to: 'react-routing',
+    badge: '' 
+}

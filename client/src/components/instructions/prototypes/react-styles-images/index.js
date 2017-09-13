@@ -5,10 +5,6 @@ import Code from '../../../code';
 import Cc from '../../../code_component';
 import examples from './examples';
 
-// NOTE: Change branch prop in <Intro/>
-// Use <code></code> for in line code/command examples
-// Use <Cc/> to surround text in < >
-// Use <Code/> for large multi line code examples
 export default function(){ 
     return (
         <div>
