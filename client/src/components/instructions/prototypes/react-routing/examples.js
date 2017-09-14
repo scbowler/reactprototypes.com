@@ -174,20 +174,20 @@ export default {
         html: `<div class="highlight highlight-source-js-jsx"><pre>&lt;<span class="pl-ent"><span class="pl-c1">Route</span></span> <span class="pl-e">exact</span> <span class="pl-e">path</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>/<span class="pl-pds">"</span></span> <span class="pl-e">component</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">Welcome</span></span><span class="pl-pse">}</span>/&gt;</pre></div>`
     },
     fs4e5: {
-        html: `import React from 'react';
-import { Route } from 'react-router-dom';
-import Nav from './nav';
-import Welcome from './welcome';
-import OurMacarons from './our_macarons';
+        html: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">import</span><span class="pl-smi"> React</span><span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>react<span class="pl-pds">'</span></span>;
+<span class="pl-k">import</span> {<span class="pl-smi"> Route</span> }<span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>react-router-dom<span class="pl-pds">'</span></span>;
+<span class="pl-k">import</span><span class="pl-smi"> Nav</span><span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>./nav<span class="pl-pds">'</span></span>;
+<span class="pl-k">import</span><span class="pl-smi"> Welcome</span><span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>./welcome<span class="pl-pds">'</span></span>;
+<span class="pl-k">import</span><span class="pl-smi"> OurMacarons</span><span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>./our_macarons<span class="pl-pds">'</span></span>;
 
 
-export default () => (
-    <div className="container">
-        <Nav/>
-        <Route exact path="/" component={Welcome}/>
-        <Route path="/our-macarons" component={OurMacarons}/>
-    </div>
-);`,
+<span class="pl-k">export default</span> () <span class="pl-k">=&gt;</span> (
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">className</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>container<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent"><span class="pl-c1">Nav</span></span>/&gt;
+        &lt;<span class="pl-ent"><span class="pl-c1">Route</span></span> <span class="pl-e">exact</span> <span class="pl-e">path</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>/<span class="pl-pds">"</span></span> <span class="pl-e">component</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">Welcome</span></span><span class="pl-pse">}</span>/&gt;
+        &lt;<span class="pl-ent"><span class="pl-c1">Route</span></span> <span class="pl-e">path</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>/our-macarons<span class="pl-pds">"</span></span> <span class="pl-e">component</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">OurMacarons</span></span><span class="pl-pse">}</span>/&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+);</pre></div>`,
         text: viewApp
     },
     fs5e1: {
