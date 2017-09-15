@@ -6,6 +6,8 @@ import ReactStylesImages from './react-styles-images';
 import ReactRouting from './react-routing';
 import ReactAxios from './react-axios';
 
+// exported const name must be camelCased and the 'to' property must match using hyphens
+
 // Badge object example
 // badge: {
 //     color: 'yellow',

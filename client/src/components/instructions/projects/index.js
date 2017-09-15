@@ -1,8 +1,16 @@
 import Guess from './guess-game';
 import MBoutique from './mboutique';
 import MBoutique2 from './mboutique2';
+import TodoList from './todo-list';
 
-// const name must be camelCased and the 'to' property must match using hyphens
+// exported const name must be camelCased and the 'to' property must match using hyphens
+
+// Badge object example
+// badge: {
+//     color: 'yellow',
+//     opacity: .5,
+//     text: 'Coming Soon!'
+// }
 
 export const guessingGame = {
     component: Guess,
@@ -28,4 +36,17 @@ export const mboutiqueRouting = {
     text: 'Build the remaining 3 pages of the MBoutique website',
     to: 'mboutique-routing',
     badge: ''
+}
+
+export const toDoList = {
+    component: TodoList,
+    title: 'To Do List',
+    subtitle: '004',
+    text: 'Create a multi-page app that utilizes a To Do List API',
+    to: 'to-do-list',
+    badge: {
+        color: 'yellow',
+        opacity: .5,
+        text: 'Coming Soon!'
+    }
 }
