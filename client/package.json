@@ -15,6 +15,7 @@
     "url": "https://github.com/Learning-Fuze/react_starter.git"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "imagemin-webpack-plugin": "^1.5.0-beta.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
