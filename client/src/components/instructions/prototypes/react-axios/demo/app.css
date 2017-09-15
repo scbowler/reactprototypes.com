@@ -1,0 +1,11 @@
+.main-background {
+    background-image: url('./images/movie_bg.jpg');
+}
+
+.main-background h1 {
+    color: white;
+}
+
+.main-background .card {
+    overflow: unset;
+}
