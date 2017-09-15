@@ -4,6 +4,14 @@ import ReactComponentState from './react-component-state';
 import ReactInputState from './react-input-forms';
 import ReactStylesImages from './react-styles-images';
 import ReactRouting from './react-routing';
+import ReactAxios from './react-axios';
+
+// Badge object example
+// badge: {
+//     color: 'yellow',
+//     opacity: .5,
+//     text: 'Coming Soon!'
+// }
 
 export const reactIntro = {
     component: ReactIntro,
@@ -35,7 +43,6 @@ export const reactInputsForms = {
     subtitle: '004',
     text: 'Utilizing component state to handle inputs / forms',
     to: 'react-inputs-forms',
-    badge: ''
 };
 
 export const reactStylesImages = {
@@ -58,4 +65,13 @@ export const reactRouting = {
     text: 'Create single page apps using React Router\'s dynamic routing',
     to: 'react-routing',
     badge: '' 
+}
+
+export const reactAxios = {
+    component: ReactAxios,
+    title: 'React xmlHttp Requests with Axios',
+    subtitle: '007',
+    text: 'Make xmlHttp requests using the Axios library (similar to AJAX)',
+    to: 'react-axios',
+    badge: ''
 }
