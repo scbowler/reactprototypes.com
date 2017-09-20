@@ -41,3 +41,12 @@ function pathToKey(path){
 
     return pathArr.join('');
 }
+
+/* ===== React Redux Intro Demo ===== */
+
+export function updateTime(){
+    return {
+        type: types.UPDATE_TIME,
+        payload: new Date().toLocaleTimeString()
+    }
+}
