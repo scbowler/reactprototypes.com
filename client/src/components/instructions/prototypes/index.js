@@ -5,6 +5,7 @@ import ReactInputState from './react-input-forms';
 import ReactStylesImages from './react-styles-images';
 import ReactRouting from './react-routing';
 import ReactAxios from './react-axios';
+import ReactReduxIntro from './react-redux-intro';
 
 // exported const name must be camelCased and the 'to' property must match using hyphens
 
@@ -65,8 +66,7 @@ export const reactRouting = {
     title: 'React Routing with React Router v4',
     subtitle: '006',
     text: 'Create single page apps using React Router\'s dynamic routing',
-    to: 'react-routing',
-    badge: '' 
+    to: 'react-routing', 
 }
 
 export const reactAxios = {
@@ -75,5 +75,14 @@ export const reactAxios = {
     subtitle: '007',
     text: 'Make xmlHttp requests using the Axios library (similar to AJAX)',
     to: 'react-axios',
+    badge: ''
+}
+
+export const reactReduxIntro = {
+    component: ReactReduxIntro,
+    title: 'React Redux Intro',
+    subtitle: '008',
+    text: 'An introduction to Redux with React',
+    to: 'react-redux-intro',
     badge: ''
 }
