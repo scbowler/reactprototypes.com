@@ -43,6 +43,16 @@ export default function(){
                 <Clock/>
             </Card>
             <Card title={fs++} subtitle="Setup Redux">
+                <p>In your terminal do the following:</p>
+                <ol>
+                    <li>Verify you are in the <code>react-prototypes</code> directory</li>
+                    <li>Use <code>npm</code> to install <code>redux</code> and <code>react-redux</code>
+                        <ul>
+                            <li><code>npm install --save redux react-redux</code></li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>Add the following folders and files:</p>
                 <ol>
                     <li>In the <code>src/</code> folder create a folder named <code>actions/</code></li>
                     <li>In the <code>src/actions/</code> folder create a file named <code>index.js</code></li>
