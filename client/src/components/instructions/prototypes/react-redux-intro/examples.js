@@ -221,6 +221,9 @@ export default {
         html: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">export default</span> <span class="pl-en">connect</span>(<span class="pl-smi">mapStateToProps</span>)(<span class="pl-smi">Clock</span>);</pre></div>`
     },
     fs2e10: {
+        html: `<div class="highlight highlight-source-js-jsx"><pre>&lt;<span class="pl-ent">h1</span>&gt;<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-smi">props</span><span class="pl-k">.</span><span class="pl-smi">time</span></span><span class="pl-pse">}</span>&lt;/<span class="pl-ent">h1</span>&gt;</pre></div>`
+    },
+    fs2e11: {
         html: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">import</span><span class="pl-smi"> React</span>, {<span class="pl-smi"> Component</span> }<span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>react<span class="pl-pds">'</span></span>;
 <span class="pl-k">import</span> {<span class="pl-smi"> connect</span> }<span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>react-redux<span class="pl-pds">'</span></span>;
 
@@ -242,7 +245,8 @@ export default {
 }
 
 <span class="pl-k">export default</span> <span class="pl-en">connect</span>(<span class="pl-smi">mapStateToProps</span>)(<span class="pl-smi">Clock</span>);
-</pre></div>`
+</pre></div>`,
+        text: viewClock
     },
     fs3e1: {
         html: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">export</span> <span class="pl-k">function</span> <span class="pl-en">updateTime</span>(){
