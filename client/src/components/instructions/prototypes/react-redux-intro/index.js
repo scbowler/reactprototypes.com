@@ -192,7 +192,12 @@ export default function(){
                         </ol>
                         <Code {...examples.fs2e9}/>
                     </li>
+                    <li>In the <code>return</code> of the <code>render</code> method remove the text from the <Cc>h1</Cc> element</li>
+                    <li>In the now empty <Cc>h1</Cc> display the contents of <code>this.props.time</code>
+                        <Code {...examples.fs2e10}/>
+                    </li>
                 </ol>
+                <Code {...examples.fs2e11} confirm/>
                 <p>After completing this feature set you should see the time displayed in the browser</p>
                 <img src={appRender3} className="img-pop"/>
             </Card>
