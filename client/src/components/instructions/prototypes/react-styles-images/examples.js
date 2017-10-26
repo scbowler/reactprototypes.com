@@ -109,6 +109,21 @@ export default {
         html: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">import</span><span class="pl-smi"> Scrapbook</span><span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>./scrapbook<span class="pl-pds">'</span></span>;</pre></div>`
     },
     fs2e3: {
+        html: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">import</span><span class="pl-smi"> React</span><span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>react<span class="pl-pds">'</span></span>;
+<span class="pl-k">import</span><span class="pl-smi"> Scrapbook</span><span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>./scrapbook<span class="pl-pds">'</span></span>;
+<span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">'</span>./app.css<span class="pl-pds">'</span></span>;
+
+<span class="pl-k">export default</span> () <span class="pl-k">=&gt;</span> {
+<span class="pl-k">    return</span> (
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">className</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>main-container<span class="pl-pds">"</span></span>&gt;
+            &lt;<span class="pl-ent">h1</span> <span class="pl-e">className</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>main-title<span class="pl-pds">"</span></span>&gt;Scrapbook&lt;/<span class="pl-ent">h1</span>&gt;
+            &lt;<span class="pl-ent"><span class="pl-c1">Scrapbook</span></span>/&gt;
+        &lt;/<span class="pl-ent">div</span>&gt;
+    )
+}
+</pre></div>`
+    },
+    fs2e4: {
         html: `<div class="highlight highlight-source-css"><pre><span class="pl-e">.scrapbook-container</span> {
     <span class="pl-c1"><span class="pl-c1">margin</span></span>: <span class="pl-c1">10<span class="pl-k">px</span></span> <span class="pl-c1">auto</span>;
     <span class="pl-c1"><span class="pl-c1">min-height</span></span>: <span class="pl-c1">85<span class="pl-k">vh</span></span>;
@@ -116,14 +131,17 @@ export default {
     <span class="pl-c1"><span class="pl-c1">width</span></span>: <span class="pl-c1">80<span class="pl-k">vw</span></span>;
 }</pre></div>`
     },
-    fs2e4: {
+    fs2e5: {
+        html: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">'</span>./scrapbook.css<span class="pl-pds">'</span></span>;</pre></div>`
+    },
+    fs2e6: {
         html: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-c"><span class="pl-c">//</span> Your names may vary</span>
 <span class="pl-k">import</span><span class="pl-smi"> puppy</span><span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">"</span>./images/puppy1.jpeg<span class="pl-pds">"</span></span>;</pre></div>`
     },
-    fs2e5: {
+    fs2e7: {
         html: `<div class="highlight highlight-source-js-jsx"><pre>&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">puppy</span></span><span class="pl-pse">}</span>/&gt;</pre></div>`
     },
-    fs2e6: {
+    fs2e8: {
         html: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">import</span><span class="pl-smi">  React</span><span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">"</span>react<span class="pl-pds">"</span></span>;
 <span class="pl-k">import</span><span class="pl-smi"> puppy</span><span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">"</span>./images/puppy1.jpeg<span class="pl-pds">"</span></span>;
 <span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">'</span>./scrapbook.css<span class="pl-pds">'</span></span>;
@@ -436,5 +454,24 @@ export default {
 ];
 </pre></div>`,
         text: imgData
+    },
+    fs3e25: {
+        html: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">const</span> {<span class="pl-smi"> src</span>,<span class="pl-smi"> style</span> } <span class="pl-k">=</span><span class="pl-smi"> props</span><span class="pl-k">.</span><span class="pl-smi">about</span>;</pre></div>`
+    },
+    fs3e26: {
+        html: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">return</span> &lt;<span class="pl-ent">img</span> <span class="pl-e">className</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>scrapbook-image<span class="pl-pds">"</span></span> <span class="pl-e">style</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">style</span></span><span class="pl-pse">}</span>  <span class="pl-e">src</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">src</span></span><span class="pl-pse">}</span>/&gt;;</pre></div>`
+    },
+    fs3e27: {
+        html: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">import</span><span class="pl-smi"> React</span><span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>react<span class="pl-pds">'</span></span>;
+
+<span class="pl-k">export default</span> <span class="pl-smi">props</span> <span class="pl-k">=&gt;</span> {
+    <span class="pl-c1">console</span><span class="pl-k">.</span><span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">'</span>scrapbook image props:<span class="pl-pds">'</span></span>,<span class="pl-smi"> props</span>);
+
+    <span class="pl-k">const</span> {<span class="pl-smi"> src</span>,<span class="pl-smi"> style</span> } <span class="pl-k">=</span><span class="pl-smi"> props</span><span class="pl-k">.</span><span class="pl-smi">about</span>;
+
+<span class="pl-k">    return</span> &lt;<span class="pl-ent">img</span> <span class="pl-e">className</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>scrapbook-image<span class="pl-pds">"</span></span> <span class="pl-e">style</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">style</span></span><span class="pl-pse">}</span>  <span class="pl-e">src</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">src</span></span><span class="pl-pse">}</span>/&gt;;
+}
+</pre></div>`,
+        text: scrapbookImage
     }
 }

@@ -101,11 +101,14 @@ export default function(){
                     <li>Import the <Cc>Scrapbook/</Cc> component
                         <Code {...examples.fs2e2}/>
                     </li>
+                    <li>Add the <Cc>Scrapbook/</Cc> component into the <code>return</code> statement of the <Cc>App/</Cc> component just below the <Cc>h1</Cc>
+                        <Code {...examples.fs2e3}/>
+                    </li>
                 </ol>
                 <p>Test your code. You should now see the text from the <code>Scrapbook/</code> component in the browser:</p>
                 <img src={appRender3} className="img-pop mb-4"/>
                 <p>In the <code>src/components/</code> folder create a new file named <code>scrapbook.css</code></p>
-                <p>In the <code>src/components/scrapbook.js</code> file do the following:</p>
+                <p>In the <code>src/components/scrapbook.css</code> file do the following:</p>
                 <ol>
                     <li>Add a CSS rule for <code>.scrapbook-container</code> with the following properties:
                         <ol>
@@ -114,7 +117,13 @@ export default function(){
                             <li><code>position</code>: <code>relative</code></li>
                             <li><code>width</code>: <code>80vw</code></li>
                         </ol>
-                        <Code {...examples.fs2e3}/>
+                        <Code {...examples.fs2e4}/>
+                    </li>
+                </ol>
+                <p>In the <code>src/components/scrapbook.js</code> file do the following:</p>
+                <ol>
+                    <li>Import the CSS from <code>src/components/scrapbook.css</code>
+                        <Code {...examples.fs2e5}/>
                     </li>
                 </ol>
                 <p>Now we have gutters for our scrapbook container along with a set height and width</p>
@@ -126,15 +135,15 @@ export default function(){
                 <p>In the <code>src/components/scrapbook.js</code> file do the following:</p>
                 <ol>
                     <li>Import your image into the <Cc>Scrapbook/</Cc> component
-                        <Code {...examples.fs2e4}/>
+                        <Code {...examples.fs2e6}/>
                     </li>
                     <li>Remove the text from the <Cc>div</Cc> that has the class of <code>scrapbook-container</code></li>
                     <li>Add an <Cc>img</Cc> element inside the <Cc>div</Cc> that has the class of <code>scrapbook-container</code></li>
                     <li>Add a <code>src</code> to the <Cc>img</Cc> element
-                        <Code {...examples.fs2e5}/>
+                        <Code {...examples.fs2e7}/>
                     </li>
                 </ol>
-                <Code {...examples.fs2e6} confirm/>
+                <Code {...examples.fs2e8} confirm/>
                 <p>Test you code. You should now see your image in the browser:</p>
                 <img src={appRender5} className="img-pop"/>
             </Card>
@@ -321,6 +330,16 @@ export default function(){
                     </li>
                 </ol>
                 <Code {...examples.fs3e24} confirm/>
+                <p>In the <code>src/components/scrapbook_image.js</code> file do the following:</p>
+                <ol>
+                    <li>On the line that you are creating a <code>const</code> for <code>src</code> from <code>props.about</code> also create a <code>const</code> for <code>style</code>
+                        <Code {...examples.fs3e25}/>
+                    </li>
+                    <li>On the returned <Cc>img</Cc> add a <code>prop</code> of <code>style</code> set to <code>style</code>
+                        <Code {...examples.fs3e26}/>
+                    </li>
+                </ol>
+                <Code {...examples.fs3e27} confirm/>
                 <p>Test your code. You should now see your images displayed in a traditional scrapbook style in the browser. Feel free to adjust the CSS to your liking</p>
                 <img src={appRender9} className="img-pop"/>
             </Card>
