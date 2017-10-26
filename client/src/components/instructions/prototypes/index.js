@@ -54,11 +54,7 @@ export const reactStylesImages = {
     subtitle: '005',
     text: 'Learn to add styles to your react app in multiple ways and import images',
     to: 'react-styles-images',
-    badge: {
-        color: 'yellow',
-        opacity: .5,
-        text: 'Coming Soon!'
-    }
+    badge: ''
 };
 
 export const reactRouting = {
@@ -74,8 +70,7 @@ export const reactAxios = {
     title: 'React xmlHttp Requests with Axios',
     subtitle: '007',
     text: 'Make xmlHttp requests using the Axios library (similar to AJAX)',
-    to: 'react-axios',
-    badge: ''
+    to: 'react-axios'
 }
 
 export const reactReduxIntro = {
@@ -83,6 +78,5 @@ export const reactReduxIntro = {
     title: 'React Redux Intro',
     subtitle: '008',
     text: 'An introduction to Redux with React',
-    to: 'react-redux-intro',
-    badge: ''
+    to: 'react-redux-intro'
 }
