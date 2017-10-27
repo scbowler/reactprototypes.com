@@ -35,10 +35,10 @@ module.exports = {
             }
         }),
         new webpack.optimize.UglifyJsPlugin(),
-        new ImageminPlugin({
-            pngquant: {
-                quality: '80-90'
-            }
-        })
+        // new ImageminPlugin({
+        //     pngquant: {
+        //         quality: '80-90'
+        //     }
+        // })
     ]
 };
