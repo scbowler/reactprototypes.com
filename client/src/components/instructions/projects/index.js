@@ -2,6 +2,7 @@ import Guess from './guess-game';
 import MBoutique from './mboutique';
 import MBoutique2 from './mboutique2';
 import TodoList from './todo-list';
+import SweetCorner from './sweet-corner';
 
 // exported const name must be camelCased and the 'to' property must match using hyphens
 
@@ -25,8 +26,7 @@ export const mboutiqueHome = {
     title: 'MBoutique | Part 1 - The home page',
     subtitle: '002',
     text: 'Build the home page of the MBoutique website using React',
-    to: 'mboutique-home',
-    badge: ''
+    to: 'mboutique-home'
 };
 
 export const mboutiqueRouting = {
@@ -34,8 +34,7 @@ export const mboutiqueRouting = {
     title: 'MBoutique | Part 2 - Routing',
     subtitle: '003',
     text: 'Build the remaining 3 pages of the MBoutique website',
-    to: 'mboutique-routing',
-    badge: ''
+    to: 'mboutique-routing'
 }
 
 export const toDoList = {
@@ -49,4 +48,13 @@ export const toDoList = {
         opacity: .5,
         text: 'Coming Soon!'
     }
+}
+
+export const sweetCorner = {
+    component: SweetCorner,
+    title: 'Sweet Corner',
+    subtitle: '005',
+    text: 'Using design docs create the Sweet Corner website',
+    to: 'sweet-corner',
+    badge: ''
 }
