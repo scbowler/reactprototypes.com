@@ -3,6 +3,7 @@ import MBoutique from './mboutique';
 import MBoutique2 from './mboutique2';
 import TodoList from './todo-list';
 import SweetCorner from './sweet-corner';
+import MemoryMatch from './memory-match';
 
 // exported const name must be camelCased and the 'to' property must match using hyphens
 
@@ -56,5 +57,14 @@ export const sweetCorner = {
     subtitle: '005',
     text: 'Using design docs create the Sweet Corner website',
     to: 'sweet-corner',
+    badge: ''
+}
+
+export const memoryMatch = {
+    component: MemoryMatch,
+    title: 'Memory Match',
+    subtitle: '006',
+    text: 'Create a Memory Match game using React',
+    to: 'memory-match',
     badge: ''
 }
