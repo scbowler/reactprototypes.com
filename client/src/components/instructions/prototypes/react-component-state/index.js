@@ -23,7 +23,7 @@ import appRender13_1 from './imgs/appRender13.1.png';
 import appRender13_2 from './imgs/appRender13.2.png';
 import error1 from './imgs/error1.png';
 
-export default function(){ 
+export default function(){
     return (
         <div>
             <Intro branch="component-state"/>
@@ -326,37 +326,15 @@ export default function(){
                 <Code html={examples.example28} text={{show: 'View stopwatch.js Example', hide: 'Hide Example'}} confirm/>
                 <p>In the <code>src/components/format_time.js</code> file do the following:</p>
                 <ol>
-                    <li>In the <code>FormatTime</code> class add a <code>constructor</code> method. Remember to pass in <code>props</code> and call <code>super</code> with <code>props</code>
+                    <li>In the <code>FormatTime</code> class add a <code>constructor</code> method. Remember to pass in <code>props</code> and call <code>super</code> with <code>props</code>. We will be adding content to the <code>constructor</code> later, for now it is okay with just the <code>super</code> function call.
                         <Code html={examples.example29}/>
                     </li>
-                    <li>In the <code>constructor</code> method create the initial <code>state</code> object. The <code>state</code> will need properties for each piece of the time display: <code>hour</code>, <code>min</code>, <code>sec</code>, and <code>ms</code>
+                    <li>At this point, we need to create a method to take in our time in milliseconds, and return back our formatted time. Create a method on your <code>FormatTime</code> component called <code>millisecondsToTime</code>. Be careful of typos, autocomplete is your friend!
+                    <Code html={examples.example30}/>
+                    </li>
+                    <li>In the <code>millisecondsToTime</code> method:
                         <ol>
-                            <li><code>hour</code> set to <code>0</code></li>
-                            <li><code>min</code> set to <code>0</code></li>
-                            <li><code>sec</code> set to <code>0</code></li>
-                            <li><code>ms</code> set to <code>0</code></li>
-                        </ol>
-                        <Code html={examples.example30}/>
-                    </li>
-                    <li>In the <code>render</code> method (<i>before the return</i>) use destructuring to create constants for <code>hour</code>, <code>min</code>, <code>sec</code>, and <code>ms</code> from <code>this.state</code>
-                        <Code html={examples.example31}/>
-                    </li>
-                    <li>In the <code>return</code> of the <code>render</code> method remove everything inside the <code>&lt;div&gt;</code></li>
-                    <li>In the <code>&lt;div&gt;</code> use the <code>hour</code>, <code>min</code>, <code>sec</code>, and <code>ms</code> constants to create an output that looks like: <code>0:0:0.0</code> which is <code>hour:min:sec.ms</code>
-                        <Code html={examples.example32}/>
-                    </li>
-                    <li>Check your browser you should see something like this:
-                        <img src={appRender8} className="img-pop"/>
-                        <p><b>NOTE:</b> <i>The start and stop buttons will no longer effect the time shown. This is expected at this point</i></p>
-                        <Code html={examples.example33} text={{show: 'View format_time.js Example', hide: 'Hide Example'}} confirm/>
-                    </li>
-                    <li>We have the format done now we just need to update the state each time <code>Stopwatch</code> passes us a new <code>elapsed</code> time. We can use a lifecycle method to accomplish this, in particular we will use <code>componentWillReceiveProps</code> this method gets called every time the props being passed in are going to change</li>
-                    <li>In the <code>FormatTime</code> class create a <code>componentWillReceiveProps</code> method. <code>componentWillReceiveProps</code> gets <code>nextProps</code> passed into it.
-                        <Code html={examples.example34}/>
-                    </li>
-                    <li>In the <code>componentWillReceiveProps</code> method:
-                        <ol>
-                            <li>Use destructuring to create an <code>elapsed</code> constant from the <code>nextProps</code> variable
+                            <li>Use destructuring to create an <code>elapsed</code> constant from <code>this.props</code>.
                                 <Code html={examples.example35}/>
                             </li>
                             <li>Create a new <code>const</code> called <code>sec</code> to hold the number of seconds that have elapsed. To calculate the number of seconds elapsed you divide the <code>elapsed</code> constant by <code>1000</code>
@@ -365,7 +343,7 @@ export default function(){
                             <li>Create a new <code>const</code> called <code>min</code> to hold the number of minutes that have elapsed. To calculate the number of minutes elapsed you divide <code>sec</code> by <code>60</code>
                                 <Code html={examples.example37}/>
                             </li>
-                            <li>Lastly we need to use <code>this.setState</code> to set all four values in the state: <code>hour</code>, <code>min</code>, <code>sec</code>, <code>ms</code>. We will be using <code>Math.floor()</code> to remove any decimals and the modulo operator (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators" target="_blank">remainder operator</a>) <code>%</code> to determine the correct minutes and seconds to display
+                            <li>Lastly we need to return an object with a property for <code>hour</code>, <code>min</code>, <code>sec</code>, and <code>ms</code>. We will use this object in our <code>render</code> method to display our time in a human readable format. We will be using <code>Math.floor()</code> to remove any decimals and the modulo operator (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators" target="_blank">remainder operator</a>) <code>%</code> to determine the correct minutes and seconds to display.
                                 <ul>
                                     <li><code>hour</code> set to <code>Math.floor(min / 60)</code></li>
                                     <li><code>min</code> set to <code>Math.floor(min % 60)</code></li>
@@ -375,6 +353,13 @@ export default function(){
                                 <Code html={examples.example38}/>
                             </li>
                         </ol>
+                    </li>
+                    <li>In the <code>render</code> method (<i>before the return</i>), we will use destructuring to create constants for <code>hour</code>, <code>min</code>, <code>sec</code>, and <code>ms</code> from the object that is returned from calling our <code>millisecondsToTime</code> method.
+                        <Code html={examples.example31}/>
+                    </li>
+                    <li>In the <code>return</code> of the <code>render</code> method remove everything inside the <code>&lt;div&gt;</code></li>
+                    <li>In the <code>&lt;div&gt;</code> use the <code>hour</code>, <code>min</code>, <code>sec</code>, and <code>ms</code> constants to create an output that looks like: <code>0:0:0.0</code> which is <code>hour:min:sec.ms</code>
+                        <Code html={examples.example32}/>
                     </li>
                     <li>In the browser, test your code!
                         <ol>
@@ -529,7 +514,7 @@ export default function(){
                     <li>Add additional styles to improve the look of the timer</li>
                     <li>Allow the user to enter a specific amount of time and have the timer count down to zero</li>
                     <li>Display the time text in a different format</li>
-                    <li>Utilize the <code>leadingZero</code> and <code>trailingZero</code> methods in the <code>componentWillReceiveProps</code> method instead of the <code>render</code> method</li>
+                    <li>Utilize the <code>leadingZero</code> and <code>trailingZero</code> methods in the <code>millisecondsToTime</code> method instead of the <code>render</code> method</li>
                 </ol>
             </Card>
         </div>

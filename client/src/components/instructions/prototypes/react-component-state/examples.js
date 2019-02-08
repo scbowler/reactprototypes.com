@@ -151,7 +151,7 @@ export default {
 </pre></div>`,
     example15: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">const</span> {<span class="pl-smi"> status</span>,<span class="pl-smi"> start</span> } <span class="pl-k">=</span><span class="pl-c1"> this</span><span class="pl-k">.</span><span class="pl-smi">state</span>;</pre></div>`,
     example16: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">if</span>(<span class="pl-smi">status</span><span class="pl-k"> ===</span> <span class="pl-s"><span class="pl-pds">'</span>running<span class="pl-pds">'</span></span>){
-            
+
 }</pre></div>`,
     example17: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-en">setState</span>({
 <span class="pl-c1">    <span class="pl-s">elapsed</span>:</span> <span class="pl-k">new</span> <span class="pl-en">Date</span>()<span class="pl-k">.</span><span class="pl-en">getTime</span>()<span class="pl-k"> -</span><span class="pl-smi"> start</span>
@@ -345,13 +345,10 @@ export default {
     <span class="pl-en">super</span>(<span class="pl-smi">props</span>);
 
 }</pre></div>`,
-    example30: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-smi">state</span> <span class="pl-k">=</span> {
-<span class="pl-c1">    <span class="pl-s">hour</span>:</span> <span class="pl-c1">0</span>,
-<span class="pl-c1">    <span class="pl-s">min</span>:</span> <span class="pl-c1">0</span>,
-<span class="pl-c1">    <span class="pl-s">sec</span>:</span> <span class="pl-c1">0</span>,
-<span class="pl-c1">    <span class="pl-s">ms</span>:</span> <span class="pl-c1">0</span>
+    example30: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-en">millisecondsToTime</span>(){
+
 }</pre></div>`,
-    example31: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">const</span> {<span class="pl-smi"> hour</span>,<span class="pl-smi"> min</span>,<span class="pl-smi"> sec</span>,<span class="pl-smi"> ms</span> } <span class="pl-k">=</span><span class="pl-c1"> this</span><span class="pl-k">.</span><span class="pl-smi">state</span>;</pre></div>`,
+    example31: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">const</span> {<span class="pl-smi"> hour</span>,<span class="pl-smi"> min</span>,<span class="pl-smi"> sec</span>,<span class="pl-smi"> ms</span> } <span class="pl-k">=</span><span class="pl-c1"> this</span><span class="pl-k">.</span><span class="pl-en">millisecondsToTime</span>();</pre></div>`,
     example32: `<div class="highlight highlight-source-js-jsx"><pre>&lt;<span class="pl-ent">div</span>&gt;<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">hour</span></span><span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">min</span></span><span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">sec</span></span><span class="pl-pse">}</span>.<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">ms</span></span><span class="pl-pse">}</span>&lt;/<span class="pl-ent">div</span>&gt;</pre></div>`,
     example33: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">import</span><span class="pl-smi"> React</span>, {<span class="pl-smi"> Component</span> }<span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>react<span class="pl-pds">'</span></span>;
 
@@ -379,18 +376,18 @@ export default {
 
 <span class="pl-k">export default</span><span class="pl-smi"> FormatTime</span>;
 </pre></div>`,
-    example34: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-en">componentWillReceiveProps</span>(<span class="pl-smi">nextProps</span>){
+    example34: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-en">componentDidUpdate</span>(<span class="pl-smi">prevProps, prevState</span>){
 
 }</pre></div>`,
-    example35: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">const</span> {<span class="pl-smi"> elapsed</span> } <span class="pl-k">=</span><span class="pl-smi"> nextProps</span>;</pre></div>`,
+    example35: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">const</span> {<span class="pl-smi"> elapsed</span> } <span class="pl-k">=</span><span class="pl-smi"> this.props</span>;</pre></div>`,
     example36: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">const</span> <span class="pl-smi">sec</span><span class="pl-k"> =</span><span class="pl-smi"> elapsed</span><span class="pl-k"> /</span> <span class="pl-c1">1000</span>;</pre></div>`,
     example37: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">const</span> <span class="pl-smi">min</span><span class="pl-k"> =</span><span class="pl-smi"> sec</span><span class="pl-k"> /</span> <span class="pl-c1">60</span>;</pre></div>`,
-    example38: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-en">setState</span>({
+    example38: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-en">return </span>{
 <span class="pl-c1">    <span class="pl-s">hour</span>:</span><span class="pl-c1"> Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">min</span><span class="pl-k"> /</span> <span class="pl-c1">60</span>),
 <span class="pl-c1">    <span class="pl-s">min</span>:</span><span class="pl-c1"> Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">min</span><span class="pl-k"> %</span> <span class="pl-c1">60</span>),
 <span class="pl-c1">    <span class="pl-s">sec</span>:</span><span class="pl-c1"> Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">sec</span><span class="pl-k"> %</span> <span class="pl-c1">60</span>),
 <span class="pl-c1">    <span class="pl-s">ms</span>:</span><span class="pl-c1"> Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">elapsed</span><span class="pl-k"> %</span> <span class="pl-c1">100</span>)
-});</pre></div>`,
+}</pre></div>`,
     example39: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">import</span><span class="pl-smi"> React</span>, {<span class="pl-smi"> Component</span> }<span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>react<span class="pl-pds">'</span></span>;
 <span class="pl-k">import</span><span class="pl-smi"> Time</span><span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>./format_time<span class="pl-pds">'</span></span>;
 
@@ -473,54 +470,47 @@ export default {
 <span class="pl-c1">    <span class="pl-s">width</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>295px<span class="pl-pds">'</span></span>
 }</pre></div>`,
     example41: `<div class="highlight highlight-source-js-jsx"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">style</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-s1"><span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-smi">timerStyle</span></span><span class="pl-pse">}</span>&gt;<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">hour</span></span><span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">min</span></span><span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">sec</span></span><span class="pl-pse">}</span>.<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">ms</span></span><span class="pl-pse">}</span>&lt;/<span class="pl-ent">div</span>&gt;</pre></div>`,
-    example42: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">import</span><span class="pl-smi"> React</span>, {<span class="pl-smi"> Component</span> }<span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>react<span class="pl-pds">'</span></span>;
+    example42: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">import</span> <span class="pl-smi">React</span>, { <span class="pl-smi">Component</span> } <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>react<span class="pl-pds">'</span></span>;
 
-<span class="pl-k">class</span> <span class="pl-en">FormatTime</span> <span class="pl-k">extends</span> <span class="pl-en">Component</span> {
-    <span class="pl-en">constructor</span>(<span class="pl-smi">props</span>){
-        <span class="pl-en">super</span>(<span class="pl-smi">props</span>);
+    <span class="pl-k">class</span> <span class="pl-en">FormatTime</span> <span class="pl-k">extends</span> <span class="pl-smi">Component</span> {
 
-<span class="pl-c1">        this</span><span class="pl-k">.</span><span class="pl-smi">state</span> <span class="pl-k">=</span> {
-<span class="pl-c1">            <span class="pl-s">hour</span>:</span> <span class="pl-c1">0</span>,
-<span class="pl-c1">            <span class="pl-s">min</span>:</span> <span class="pl-c1">0</span>,
-<span class="pl-c1">            <span class="pl-s">sec</span>:</span> <span class="pl-c1">0</span>,
-<span class="pl-c1">            <span class="pl-s">ms</span>:</span> <span class="pl-c1">0</span>
+        <span class="pl-en"><span class="pl-s">constructor</span></span>(<span class="pl-smi">props</span>){
+            <span class="pl-c1">super</span>(<span class="pl-smi">props</span>);
+            <span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-smi">timerStyle</span> <span class="pl-k">=</span> {
+                <span class="pl-c1"><span class="pl-s">display</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>inline-block<span class="pl-pds">'</span></span>,
+                <span class="pl-c1"><span class="pl-s">position</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>relative<span class="pl-pds">'</span></span>,
+                <span class="pl-c1"><span class="pl-s">left</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>50%<span class="pl-pds">'</span></span>,
+                <span class="pl-c1"><span class="pl-s">transform</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>translate(-50%)<span class="pl-pds">'</span></span>,
+                <span class="pl-c1"><span class="pl-s">width</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>295px<span class="pl-pds">'</span></span>
+            }
         }
 
-<span class="pl-c1">        this</span><span class="pl-k">.</span><span class="pl-smi">timerStyle</span> <span class="pl-k">=</span> {
-<span class="pl-c1">            <span class="pl-s">display</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>inline-block<span class="pl-pds">'</span></span>,
-<span class="pl-c1">            <span class="pl-s">position</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>relative<span class="pl-pds">'</span></span>,
-<span class="pl-c1">            <span class="pl-s">left</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>50%<span class="pl-pds">'</span></span>,
-<span class="pl-c1">            <span class="pl-s">transform</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>translate(-50%)<span class="pl-pds">'</span></span>,
-<span class="pl-c1">            <span class="pl-s">width</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>295px<span class="pl-pds">'</span></span>
+        <span class="pl-en"><span class="pl-s">millisecondsToTime</span></span>(){
+            <span class="pl-k">const</span> { <span class="pl-smi">elapsed</span> } <span class="pl-k">=</span> <span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-smi">props</span>;
+
+            <span class="pl-k">const</span> <span class="pl-smi">sec</span> <span class="pl-k">=</span> <span class="pl-smi">elapsed</span> <span class="pl-k">/</span> <span class="pl-c1">1000</span>;
+            <span class="pl-k">const</span> <span class="pl-smi">min</span> <span class="pl-k">=</span> <span class="pl-smi">sec</span> <span class="pl-k">/</span> <span class="pl-c1">60</span>;
+
+            <span class="pl-k">return</span>{
+                <span class="pl-c1"><span class="pl-s">hour</span>:</span> <span class="pl-c1">Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">min</span> <span class="pl-k">/</span> <span class="pl-c1">60</span>),
+                <span class="pl-c1"><span class="pl-s">min</span>:</span> <span class="pl-c1">Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">min</span> <span class="pl-k">%</span> <span class="pl-c1">60</span>),
+                <span class="pl-c1"><span class="pl-s">sec</span>:</span> <span class="pl-c1">Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">sec</span> <span class="pl-k">%</span> <span class="pl-c1">60</span>),
+                <span class="pl-c1"><span class="pl-s">ms</span>:</span> <span class="pl-c1">Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">elapsed</span> <span class="pl-k">%</span> <span class="pl-c1">100</span>)
+            }
         }
 
+        <span class="pl-en"><span class="pl-s">render</span></span>(){
+            <span class="pl-k">const</span> { <span class="pl-smi">timerStyle</span>, <span class="pl-smi">leadingZero</span>, <span class="pl-smi">trailingZero</span> } <span class="pl-k">=</span> <span class="pl-c1">this</span>;
+
+            <span class="pl-k">const</span> { <span class="pl-smi">hour</span>, <span class="pl-smi">min</span>, <span class="pl-smi">sec</span>, <span class="pl-smi">ms</span> } <span class="pl-k">=</span> <span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-en">millisecondsToTime</span>();
+
+            <span class="pl-k">return</span> (
+                &lt;<span class="pl-ent">div</span> <span class="pl-e">style</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-smi">timerStyle</span><span class="pl-pse">}</span>&gt;<span class="pl-pse">{</span><span class="pl-smi">hour</span><span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-smi">min</span><span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-smi">sec</span><span class="pl-pse">}</span>.<span class="pl-pse">{</span><span class="pl-smi">ms</span><span class="pl-pse">}</span>&lt;/<span class="pl-ent">div</span>&gt;
+            )
+        }
     }
 
-    <span class="pl-en">componentWillReceiveProps</span>(<span class="pl-smi">nextProps</span>){
-        <span class="pl-k">const</span> {<span class="pl-smi"> elapsed</span> } <span class="pl-k">=</span><span class="pl-smi"> nextProps</span>;
-
-        <span class="pl-k">const</span> <span class="pl-smi">sec</span><span class="pl-k"> =</span><span class="pl-smi"> elapsed</span><span class="pl-k"> /</span> <span class="pl-c1">1000</span>;
-        <span class="pl-k">const</span> <span class="pl-smi">min</span><span class="pl-k"> =</span><span class="pl-smi"> sec</span><span class="pl-k"> /</span> <span class="pl-c1">60</span>;
-
-<span class="pl-c1">        this</span><span class="pl-k">.</span><span class="pl-en">setState</span>({
-<span class="pl-c1">            <span class="pl-s">hour</span>:</span><span class="pl-c1"> Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">min</span><span class="pl-k"> /</span> <span class="pl-c1">60</span>),
-<span class="pl-c1">            <span class="pl-s">min</span>:</span><span class="pl-c1"> Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">min</span><span class="pl-k"> %</span> <span class="pl-c1">60</span>),
-<span class="pl-c1">            <span class="pl-s">sec</span>:</span><span class="pl-c1"> Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">sec</span><span class="pl-k"> %</span> <span class="pl-c1">60</span>),
-<span class="pl-c1">            <span class="pl-s">ms</span>:</span><span class="pl-c1"> Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">elapsed</span><span class="pl-k"> %</span> <span class="pl-c1">100</span>)
-        });
-    }
-
-    <span class="pl-en">render</span>(){
-        <span class="pl-k">const</span> {<span class="pl-smi"> hour</span>,<span class="pl-smi"> min</span>,<span class="pl-smi"> sec</span>,<span class="pl-smi"> ms</span> } <span class="pl-k">=</span><span class="pl-c1"> this</span><span class="pl-k">.</span><span class="pl-smi">state</span>;
-
-<span class="pl-k">        return</span> (
-            &lt;<span class="pl-ent">div</span> <span class="pl-e">style</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-s1"><span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-smi">timerStyle</span></span><span class="pl-pse">}</span>&gt;<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">hour</span></span><span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">min</span></span><span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">sec</span></span><span class="pl-pse">}</span>.<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">ms</span></span><span class="pl-pse">}</span>&lt;/<span class="pl-ent">div</span>&gt;
-        )
-    }
-}
-
-<span class="pl-k">export default</span><span class="pl-smi"> FormatTime</span>;
-</pre></div>`,
+    <span class="pl-k">export</span> <span class="pl-k">default</span> <span class="pl-smi">FormatTime</span>;</pre></div>`,
     example43: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-en">leadingZero</span>(<span class="pl-smi">number</span>){
 <span class="pl-k">    if</span>(<span class="pl-smi">number</span><span class="pl-k"> &lt;</span> <span class="pl-c1">10</span>){
 <span class="pl-k">        return</span> <span class="pl-s"><span class="pl-pds">'</span>0<span class="pl-pds">'</span></span><span class="pl-k"> +</span><span class="pl-smi"> number</span>;
@@ -541,122 +531,112 @@ export default {
 <span class="pl-k">    return</span><span class="pl-smi"> number</span><span class="pl-k"> &lt;</span> <span class="pl-c1">10</span> <span class="pl-k">?</span><span class="pl-s"> <span class="pl-s">\`</span><span class="pl-s"><span class="pl-e">\${<span class="pl-smi">number</span>}</span>0</span><span class="pl-s">\`</span></span> <span class="pl-k">:</span><span class="pl-smi"> number</span>;
 }</pre></div>`,
     example48: `<div class="highlight highlight-source-js-jsx"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">style</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-s1"><span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-smi">timerStyle</span></span><span class="pl-pse">}</span>&gt;<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-en">leadingZero</span>(<span class="pl-smi">hour</span>)</span><span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-en">leadingZero</span>(<span class="pl-smi">min</span>)</span><span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-en">leadingZero</span>(<span class="pl-smi">sec</span>)</span><span class="pl-pse">}</span>.<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-en">trailingZero</span>(<span class="pl-smi">ms</span>)</span><span class="pl-pse">}</span>&lt;/<span class="pl-ent">div</span>&gt;</pre></div>`,
-    example49: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">import</span><span class="pl-smi"> React</span>, {<span class="pl-smi"> Component</span> }<span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>react<span class="pl-pds">'</span></span>;
+    example49: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">import</span> <span class="pl-smi">React</span>, { <span class="pl-smi">Component</span> } <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>react<span class="pl-pds">'</span></span>;
 
-<span class="pl-k">class</span> <span class="pl-en">FormatTime</span> <span class="pl-k">extends</span> <span class="pl-en">Component</span> {
-    <span class="pl-en">constructor</span>(<span class="pl-smi">props</span>){
-        <span class="pl-en">super</span>(<span class="pl-smi">props</span>);
+    <span class="pl-k">class</span> <span class="pl-en">FormatTime</span> <span class="pl-k">extends</span> <span class="pl-smi">Component</span> {
 
-<span class="pl-c1">        this</span><span class="pl-k">.</span><span class="pl-smi">state</span> <span class="pl-k">=</span> {
-<span class="pl-c1">            <span class="pl-s">hour</span>:</span> <span class="pl-c1">0</span>,
-<span class="pl-c1">            <span class="pl-s">min</span>:</span> <span class="pl-c1">0</span>,
-<span class="pl-c1">            <span class="pl-s">sec</span>:</span> <span class="pl-c1">0</span>,
-<span class="pl-c1">            <span class="pl-s">ms</span>:</span> <span class="pl-c1">0</span>
+        <span class="pl-en"><span class="pl-s">constructor</span></span>(<span class="pl-smi">props</span>){
+            <span class="pl-c1">super</span>(<span class="pl-smi">props</span>);
+            <span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-smi">timerStyle</span> <span class="pl-k">=</span> {
+                <span class="pl-c1"><span class="pl-s">display</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>inline-block<span class="pl-pds">'</span></span>,
+                <span class="pl-c1"><span class="pl-s">position</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>relative<span class="pl-pds">'</span></span>,
+                <span class="pl-c1"><span class="pl-s">left</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>50%<span class="pl-pds">'</span></span>,
+                <span class="pl-c1"><span class="pl-s">transform</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>translate(-50%)<span class="pl-pds">'</span></span>,
+                <span class="pl-c1"><span class="pl-s">width</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>383px<span class="pl-pds">'</span></span>
+            }
         }
 
-<span class="pl-c1">        this</span><span class="pl-k">.</span><span class="pl-smi">timerStyle</span> <span class="pl-k">=</span> {
-<span class="pl-c1">            <span class="pl-s">display</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>inline-block<span class="pl-pds">'</span></span>,
-<span class="pl-c1">            <span class="pl-s">position</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>relative<span class="pl-pds">'</span></span>,
-<span class="pl-c1">            <span class="pl-s">left</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>50%<span class="pl-pds">'</span></span>,
-<span class="pl-c1">            <span class="pl-s">transform</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>translate(-50%)<span class="pl-pds">'</span></span>,
-<span class="pl-c1">            <span class="pl-s">width</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>383px<span class="pl-pds">'</span></span>
-        }
-    }
+        <span class="pl-en"><span class="pl-s">millisecondsToTime</span></span>(){
+            <span class="pl-k">const</span> { <span class="pl-smi">elapsed</span> } <span class="pl-k">=</span> <span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-smi">props</span>;
 
-    <span class="pl-en">componentWillReceiveProps</span>(<span class="pl-smi">nextProps</span>){
-        <span class="pl-k">const</span> {<span class="pl-smi"> elapsed</span> } <span class="pl-k">=</span><span class="pl-smi"> nextProps</span>;
+            <span class="pl-k">const</span> <span class="pl-smi">sec</span> <span class="pl-k">=</span> <span class="pl-smi">elapsed</span> <span class="pl-k">/</span> <span class="pl-c1">1000</span>;
+            <span class="pl-k">const</span> <span class="pl-smi">min</span> <span class="pl-k">=</span> <span class="pl-smi">sec</span> <span class="pl-k">/</span> <span class="pl-c1">60</span>;
 
-        <span class="pl-k">const</span> <span class="pl-smi">sec</span><span class="pl-k"> =</span><span class="pl-smi"> elapsed</span><span class="pl-k"> /</span> <span class="pl-c1">1000</span>;
-        <span class="pl-k">const</span> <span class="pl-smi">min</span><span class="pl-k"> =</span><span class="pl-smi"> sec</span><span class="pl-k"> /</span> <span class="pl-c1">60</span>;
-
-<span class="pl-c1">        this</span><span class="pl-k">.</span><span class="pl-en">setState</span>({
-<span class="pl-c1">            <span class="pl-s">hour</span>:</span><span class="pl-c1"> Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">min</span><span class="pl-k"> /</span> <span class="pl-c1">60</span>),
-<span class="pl-c1">            <span class="pl-s">min</span>:</span><span class="pl-c1"> Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">min</span><span class="pl-k"> %</span> <span class="pl-c1">60</span>),
-<span class="pl-c1">            <span class="pl-s">sec</span>:</span><span class="pl-c1"> Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">sec</span><span class="pl-k"> %</span> <span class="pl-c1">60</span>),
-<span class="pl-c1">            <span class="pl-s">ms</span>:</span><span class="pl-c1"> Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">elapsed</span><span class="pl-k"> %</span> <span class="pl-c1">100</span>)
-        });
-    }
-
-    <span class="pl-en">leadingZero</span>(<span class="pl-smi">number</span>){
-<span class="pl-k">        if</span>(<span class="pl-smi">number</span><span class="pl-k"> &lt;</span> <span class="pl-c1">10</span>){
-<span class="pl-k">            return</span> <span class="pl-s"><span class="pl-pds">'</span>0<span class="pl-pds">'</span></span><span class="pl-k"> +</span><span class="pl-smi"> number</span>;
-        }
-<span class="pl-k">        return</span><span class="pl-smi"> number</span>;
-    }
-
-    <span class="pl-en">trailingZero</span>(<span class="pl-smi">number</span>){
-<span class="pl-k">        if</span>(<span class="pl-smi">number</span><span class="pl-k"> &lt;</span> <span class="pl-c1">10</span>){
-<span class="pl-k">            return</span><span class="pl-smi"> number</span><span class="pl-k"> +</span> <span class="pl-s"><span class="pl-pds">'</span>0<span class="pl-pds">'</span></span>;
-        }
-<span class="pl-k">        return</span><span class="pl-smi"> number</span>;
-    }
-
-    <span class="pl-en">render</span>(){
-        <span class="pl-k">const</span> {<span class="pl-smi"> hour</span>,<span class="pl-smi"> min</span>,<span class="pl-smi"> sec</span>,<span class="pl-smi"> ms</span> } <span class="pl-k">=</span><span class="pl-c1"> this</span><span class="pl-k">.</span><span class="pl-smi">state</span>;
-
-<span class="pl-k">        return</span> (
-            &lt;<span class="pl-ent">div</span> <span class="pl-e">style</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-s1"><span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-smi">timerStyle</span></span><span class="pl-pse">}</span>&gt;<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-en">leadingZero</span>(<span class="pl-smi">hour</span>)</span><span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-en">leadingZero</span>(<span class="pl-smi">min</span>)</span><span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-en">leadingZero</span>(<span class="pl-smi">sec</span>)</span><span class="pl-pse">}</span>.<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-en">trailingZero</span>(<span class="pl-smi">ms</span>)</span><span class="pl-pse">}</span>&lt;/<span class="pl-ent">div</span>&gt;
-        )
-    }
-}
-
-<span class="pl-k">export default</span><span class="pl-smi"> FormatTime</span>;
-</pre></div>`,
-    example50: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">import</span><span class="pl-smi"> React</span>, {<span class="pl-smi"> Component</span> }<span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>react<span class="pl-pds">'</span></span>;
-
-<span class="pl-k">class</span> <span class="pl-en">FormatTime</span> <span class="pl-k">extends</span> <span class="pl-en">Component</span> {
-    <span class="pl-en">constructor</span>(<span class="pl-smi">props</span>){
-        <span class="pl-en">super</span>(<span class="pl-smi">props</span>);
-
-<span class="pl-c1">        this</span><span class="pl-k">.</span><span class="pl-smi">state</span> <span class="pl-k">=</span> {
-<span class="pl-c1">            <span class="pl-s">hour</span>:</span> <span class="pl-c1">0</span>,
-<span class="pl-c1">            <span class="pl-s">min</span>:</span> <span class="pl-c1">0</span>,
-<span class="pl-c1">            <span class="pl-s">sec</span>:</span> <span class="pl-c1">0</span>,
-<span class="pl-c1">            <span class="pl-s">ms</span>:</span> <span class="pl-c1">0</span>
+            <span class="pl-k">return</span>{
+                <span class="pl-c1"><span class="pl-s">hour</span>:</span> <span class="pl-c1">Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">min</span> <span class="pl-k">/</span> <span class="pl-c1">60</span>),
+                <span class="pl-c1"><span class="pl-s">min</span>:</span> <span class="pl-c1">Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">min</span> <span class="pl-k">%</span> <span class="pl-c1">60</span>),
+                <span class="pl-c1"><span class="pl-s">sec</span>:</span> <span class="pl-c1">Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">sec</span> <span class="pl-k">%</span> <span class="pl-c1">60</span>),
+                <span class="pl-c1"><span class="pl-s">ms</span>:</span> <span class="pl-c1">Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">elapsed</span> <span class="pl-k">%</span> <span class="pl-c1">100</span>)
+            };
         }
 
-<span class="pl-c1">        this</span><span class="pl-k">.</span><span class="pl-smi">timerStyle</span> <span class="pl-k">=</span> {
-<span class="pl-c1">            <span class="pl-s">display</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>inline-block<span class="pl-pds">'</span></span>,
-<span class="pl-c1">            <span class="pl-s">position</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>relative<span class="pl-pds">'</span></span>,
-<span class="pl-c1">            <span class="pl-s">left</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>50%<span class="pl-pds">'</span></span>,
-<span class="pl-c1">            <span class="pl-s">transform</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>translate(-50%)<span class="pl-pds">'</span></span>,
-<span class="pl-c1">            <span class="pl-s">width</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>383px<span class="pl-pds">'</span></span>
+        <span class="pl-en"><span class="pl-s">leadingZero</span></span>(<span class="pl-smi">number</span>){
+            <span class="pl-k">if</span>(<span class="pl-smi">number</span> <span class="pl-k">&lt;</span> <span class="pl-c1">10</span>){
+                <span class="pl-k">return</span> <span class="pl-s"><span class="pl-pds">'</span>0<span class="pl-pds">'</span></span> <span class="pl-k">+</span> <span class="pl-smi">number</span>;
+            }
+            <span class="pl-k">return</span> <span class="pl-smi">number</span>;
+        }
+
+        <span class="pl-en"><span class="pl-s">trailingZero</span></span>(<span class="pl-smi">number</span>){
+            <span class="pl-k">if</span>(<span class="pl-smi">number</span> <span class="pl-k">&lt;</span> <span class="pl-c1">10</span>){
+                <span class="pl-k">return</span> <span class="pl-smi">number</span> <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">'</span>0<span class="pl-pds">'</span></span>;
+            }
+            <span class="pl-k">return</span> <span class="pl-smi">number</span>;
+        }
+
+        <span class="pl-en"><span class="pl-s">render</span></span>(){
+            <span class="pl-k">const</span> { <span class="pl-smi">timerStyle</span>, <span class="pl-smi">leadingZero</span>, <span class="pl-smi">trailingZero</span> } <span class="pl-k">=</span> <span class="pl-c1">this</span>;
+
+            <span class="pl-k">const</span> { <span class="pl-smi">hour</span>, <span class="pl-smi">min</span>, <span class="pl-smi">sec</span>, <span class="pl-smi">ms</span> } <span class="pl-k">=</span> <span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-en">millisecondsToTime</span>();
+
+            <span class="pl-k">return</span> (
+                &lt;<span class="pl-ent">div</span> <span class="pl-e">style</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-smi">timerStyle</span><span class="pl-pse">}</span>&gt;<span class="pl-pse">{</span><span class="pl-en">leadingZero</span>(<span class="pl-smi">hour</span>)<span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-en">leadingZero</span>(<span class="pl-smi">min</span>)<span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-en">leadingZero</span>(<span class="pl-smi">sec</span>)<span class="pl-pse">}</span>.<span class="pl-pse">{</span><span class="pl-en">trailingZero</span>(<span class="pl-smi">ms</span>)<span class="pl-pse">}</span>&lt;/<span class="pl-ent">div</span>&gt;
+            )
         }
     }
 
-    <span class="pl-en">componentWillReceiveProps</span>(<span class="pl-smi">nextProps</span>){
-        <span class="pl-k">const</span> {<span class="pl-smi"> elapsed</span> } <span class="pl-k">=</span><span class="pl-smi"> nextProps</span>;
+    <span class="pl-k">export</span> <span class="pl-k">default</span> <span class="pl-smi">FormatTime</span>;
+    </pre></div>`,
+    example50: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">import</span> <span class="pl-smi">React</span>, { <span class="pl-smi">Component</span> } <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>react<span class="pl-pds">'</span></span>;
 
-        <span class="pl-k">const</span> <span class="pl-smi">sec</span><span class="pl-k"> =</span><span class="pl-smi"> elapsed</span><span class="pl-k"> /</span> <span class="pl-c1">1000</span>;
-        <span class="pl-k">const</span> <span class="pl-smi">min</span><span class="pl-k"> =</span><span class="pl-smi"> sec</span><span class="pl-k"> /</span> <span class="pl-c1">60</span>;
+    <span class="pl-k">class</span> <span class="pl-en">FormatTime</span> <span class="pl-k">extends</span> <span class="pl-smi">Component</span> {
 
-<span class="pl-c1">        this</span><span class="pl-k">.</span><span class="pl-en">setState</span>({
-<span class="pl-c1">            <span class="pl-s">hour</span>:</span><span class="pl-c1"> Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">min</span><span class="pl-k"> /</span> <span class="pl-c1">60</span>),
-<span class="pl-c1">            <span class="pl-s">min</span>:</span><span class="pl-c1"> Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">min</span><span class="pl-k"> %</span> <span class="pl-c1">60</span>),
-<span class="pl-c1">            <span class="pl-s">sec</span>:</span><span class="pl-c1"> Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">sec</span><span class="pl-k"> %</span> <span class="pl-c1">60</span>),
-<span class="pl-c1">            <span class="pl-s">ms</span>:</span><span class="pl-c1"> Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">elapsed</span><span class="pl-k"> %</span> <span class="pl-c1">100</span>)
-        });
+        <span class="pl-en"><span class="pl-s">constructor</span></span>(<span class="pl-smi">props</span>){
+            <span class="pl-c1">super</span>(<span class="pl-smi">props</span>);
+            <span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-smi">timerStyle</span> <span class="pl-k">=</span> {
+                <span class="pl-c1"><span class="pl-s">display</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>inline-block<span class="pl-pds">'</span></span>,
+                <span class="pl-c1"><span class="pl-s">position</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>relative<span class="pl-pds">'</span></span>,
+                <span class="pl-c1"><span class="pl-s">left</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>50%<span class="pl-pds">'</span></span>,
+                <span class="pl-c1"><span class="pl-s">transform</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>translate(-50%)<span class="pl-pds">'</span></span>,
+                <span class="pl-c1"><span class="pl-s">width</span>:</span> <span class="pl-s"><span class="pl-pds">'</span>383px<span class="pl-pds">'</span></span>
+            }
+        }
+
+        <span class="pl-en"><span class="pl-s">millisecondsToTime</span></span>(){
+            <span class="pl-k">const</span> { <span class="pl-smi">elapsed</span> } <span class="pl-k">=</span> <span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-smi">props</span>;
+
+            <span class="pl-k">const</span> <span class="pl-smi">sec</span> <span class="pl-k">=</span> <span class="pl-smi">elapsed</span> <span class="pl-k">/</span> <span class="pl-c1">1000</span>;
+            <span class="pl-k">const</span> <span class="pl-smi">min</span> <span class="pl-k">=</span> <span class="pl-smi">sec</span> <span class="pl-k">/</span> <span class="pl-c1">60</span>;
+
+            <span class="pl-k">return</span>{
+                <span class="pl-c1"><span class="pl-s">hour</span>:</span> <span class="pl-c1">Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">min</span> <span class="pl-k">/</span> <span class="pl-c1">60</span>),
+                <span class="pl-c1"><span class="pl-s">min</span>:</span> <span class="pl-c1">Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">min</span> <span class="pl-k">%</span> <span class="pl-c1">60</span>),
+                <span class="pl-c1"><span class="pl-s">sec</span>:</span> <span class="pl-c1">Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">sec</span> <span class="pl-k">%</span> <span class="pl-c1">60</span>),
+                <span class="pl-c1"><span class="pl-s">ms</span>:</span> <span class="pl-c1">Math</span><span class="pl-k">.</span><span class="pl-en">floor</span>(<span class="pl-smi">elapsed</span> <span class="pl-k">%</span> <span class="pl-c1">100</span>)
+            };
+        }
+
+        <span class="pl-en"><span class="pl-s">leadingZero</span></span>(<span class="pl-smi">num</span>){
+            <span class="pl-k">return</span> <span class="pl-smi">num</span> <span class="pl-k">&lt;</span> <span class="pl-c1">10</span> <span class="pl-k">?</span> <span class="pl-k">\`</span><span class="pl-s">0</span><span class="pl-k">\${</span><span class="pl-smi">num</span><span class="pl-k">}</span><span class="pl-k">\`</span> : <span class="pl-smi">num</span>;
+        }
+
+        <span class="pl-en"><span class="pl-s">trailingZero</span></span>(<span class="pl-smi">num</span>){
+            <span class="pl-k">return</span> <span class="pl-smi">num</span> <span class="pl-k">&lt;</span> <span class="pl-c1">10</span> <span class="pl-k">?</span> <span class="pl-k">\`</span><span class="pl-k">\${</span><span class="pl-smi">num</span><span class="pl-k">}</span><span class="pl-s">0</span><span class="pl-k">\`</span> : <span class="pl-smi">num</span>;
+        }
+
+        <span class="pl-en"><span class="pl-s">render</span></span>(){
+            <span class="pl-k">const</span> { <span class="pl-smi">timerStyle</span>, <span class="pl-smi">leadingZero</span>, <span class="pl-smi">trailingZero</span> } <span class="pl-k">=</span> <span class="pl-c1">this</span>;
+
+            <span class="pl-k">const</span> { <span class="pl-smi">hour</span>, <span class="pl-smi">min</span>, <span class="pl-smi">sec</span>, <span class="pl-smi">ms</span> } <span class="pl-k">=</span> <span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-en">millisecondsToTime</span>();
+
+            <span class="pl-k">return</span> (
+                &lt;<span class="pl-ent">div</span> <span class="pl-e">style</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-smi">timerStyle</span><span class="pl-pse">}</span>&gt;<span class="pl-pse">{</span><span class="pl-en">leadingZero</span>(<span class="pl-smi">hour</span>)<span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-en">leadingZero</span>(<span class="pl-smi">min</span>)<span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-en">leadingZero</span>(<span class="pl-smi">sec</span>)<span class="pl-pse">}</span>.<span class="pl-pse">{</span><span class="pl-en">trailingZero</span>(<span class="pl-smi">ms</span>)<span class="pl-pse">}</span>&lt;/<span class="pl-ent">div</span>&gt;
+            )
+        }
     }
 
-    <span class="pl-en">leadingZero</span>(<span class="pl-smi">num</span>){
-<span class="pl-k">        return</span><span class="pl-smi"> num</span><span class="pl-k"> &lt;</span> <span class="pl-c1">10</span> <span class="pl-k">?</span><span class="pl-s"> <span class="pl-s">\`</span><span class="pl-s">0<span class="pl-e">\${<span class="pl-smi">num</span>}</span></span><span class="pl-s">\`</span></span> <span class="pl-k">:</span><span class="pl-smi"> num</span>;
-    }
-
-    <span class="pl-en">trailingZero</span>(<span class="pl-smi">num</span>){
-<span class="pl-k">        return</span><span class="pl-smi"> num</span><span class="pl-k"> &lt;</span> <span class="pl-c1">10</span> <span class="pl-k">?</span><span class="pl-s"> <span class="pl-s">\`</span><span class="pl-s"><span class="pl-e">\${<span class="pl-smi">num</span>}</span>0</span><span class="pl-s">\`</span></span> <span class="pl-k">:</span><span class="pl-smi"> num</span>; 
-    }
-
-    <span class="pl-en">render</span>(){
-        <span class="pl-k">const</span> {<span class="pl-smi"> timerStyle</span>,<span class="pl-smi"> leadingZero</span>,<span class="pl-smi"> trailingZero</span>,<span class="pl-c1"> <span class="pl-s">state</span>:</span> {<span class="pl-smi"> hour</span>,<span class="pl-smi"> min</span>,<span class="pl-smi"> sec</span>,<span class="pl-smi"> ms</span> } } <span class="pl-k">=</span><span class="pl-c1"> this</span>;
-
-<span class="pl-k">        return</span> (
-            &lt;<span class="pl-ent">div</span> <span class="pl-e">style</span><span class="pl-k">=</span><span class="pl-pse">{</span><span class="pl-s1"><span class="pl-smi">timerStyle</span></span><span class="pl-pse">}</span>&gt;<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-en">leadingZero</span>(<span class="pl-smi">hour</span>)</span><span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-en">leadingZero</span>(<span class="pl-smi">min</span>)</span><span class="pl-pse">}</span>:<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-en">leadingZero</span>(<span class="pl-smi">sec</span>)</span><span class="pl-pse">}</span>.<span class="pl-pse">{</span><span class="pl-s1"><span class="pl-en">trailingZero</span>(<span class="pl-smi">ms</span>)</span><span class="pl-pse">}</span>&lt;/<span class="pl-ent">div</span>&gt;
-        )
-    }
-}
-
-<span class="pl-k">export default</span><span class="pl-smi"> FormatTime</span>;
-</pre></div>`,
+    <span class="pl-k">export</span> <span class="pl-k">default</span> <span class="pl-smi">FormatTime</span>;
+    </pre></div>`,
     example51: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">const</span> {<span class="pl-smi"> start</span>,<span class="pl-smi"> elapsed</span> } <span class="pl-k">=</span><span class="pl-c1"> this</span><span class="pl-k">.</span><span class="pl-smi">state</span>;</pre></div>`,
     example52: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">let</span> <span class="pl-smi">newStart</span><span class="pl-k"> =</span> <span class="pl-k">new</span> <span class="pl-en">Date</span>()<span class="pl-k">.</span><span class="pl-en">getTime</span>();</pre></div>`,
     example53: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">if</span>(<span class="pl-smi">start</span>){
