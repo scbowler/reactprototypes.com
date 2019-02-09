@@ -17,7 +17,7 @@ import console4 from './images/console4.png';
 import console5 from './images/console5.png';
 import console6 from './images/console6.png';
 
-export default function(){ 
+export default function(){
     return (
         <div>
             <Intro branch="react-axios"/>
@@ -83,11 +83,11 @@ export default function(){
                     <li>Import axios from axios
                         <Code {...examples.fs2e1}/>
                     </li>
-                    <li>Add a <code>componentWillMount</code> method to the <code>MoviesContainer</code> class
+                    <li>Add a <code>componentDidMount</code> method to the <code>MoviesContainer</code> class
                         <Code {...examples.fs2e2}/>
                     </li>
                 </ol>
-                <p>The next few steps will be inside of the <code>componentWillMount</code> method</p>
+                <p>The next few steps will be inside of the <code>componentDidMount</code> method</p>
                 <ol start="3">
                     <li>Create a <code>const</code> to hold the iTunes API URL <code>http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topMovies/json</code>
                         <Code {...examples.fs2e3}/>
@@ -121,7 +121,7 @@ export default function(){
                     </li>
                 </ol>
                 <Code {...examples.fs2e8} confirm/>
-                <p>Now we can go back to the <code>componentWillMount</code> method and add the movies array to <code>state</code></p>
+                <p>Now we can go back to the <code>componentDidMount</code> method and add the movies array to <code>state</code></p>
                 <ol start="12">
                     <li>In the anonymous function where we logged the server response use <code>this.setState</code> to set <code>movies</code> to <code>resp.data.feed.entry</code>
                         <Code {...examples.fs2e9}/>

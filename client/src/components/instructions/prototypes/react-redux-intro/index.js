@@ -11,7 +11,7 @@ import appRender3 from './images/appRender3.png';
 import appRender4 from './images/appRender4.png';
 
 export default function(){
-    let fs = 1; 
+    let fs = 1;
     return (
         <div>
             <Intro branch="redux-intro"/>
@@ -247,7 +247,7 @@ export default function(){
                         </ol>
                         <Code {...examples.fs3e9}/>
                     </li>
-                    <li>Inside the <code>Clock</code> class add a <code>componentWillMount</code> method
+                    <li>Inside the <code>Clock</code> class add a <code>componentDidMount</code> method
                         <Code {...examples.fs3e10}/>
                     </li>
                     <li>Use <code>setInterval</code> to call <code>this.props.updateTime</code> every 1 second

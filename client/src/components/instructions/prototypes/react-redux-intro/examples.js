@@ -305,7 +305,7 @@ export default {
         text: {show: 'Show Advanced Example', hide: 'Hide Example'}
     },
     fs3e10: {
-        html: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-en">componentWillMount</span>(){
+        html: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-en">componentDidMount</span>(){
 
 }</pre></div>`
     },
@@ -318,8 +318,8 @@ export default {
 <span class="pl-k">import</span> {<span class="pl-smi"> updateTime</span> }<span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>../actions/index<span class="pl-pds">'</span></span>;
 
 <span class="pl-k">class</span> <span class="pl-en">Clock</span> <span class="pl-k">extends</span> <span class="pl-en">Component</span> {
-    
-    <span class="pl-en">componentWillMount</span>(){
+
+    <span class="pl-en">componentDidMount</span>(){
         <span class="pl-en">setInterval</span>(<span class="pl-c1">this</span><span class="pl-k">.</span><span class="pl-smi">props</span><span class="pl-k">.</span><span class="pl-smi">updateTime</span>, <span class="pl-c1">1000</span>);
     }
 
