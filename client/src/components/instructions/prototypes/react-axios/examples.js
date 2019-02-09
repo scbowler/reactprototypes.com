@@ -52,8 +52,8 @@ export default {
         html: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-k">import</span><span class="pl-smi"> axios</span><span class="pl-k"> from</span> <span class="pl-s"><span class="pl-pds">'</span>axios<span class="pl-pds">'</span></span>;</pre></div>`
     },
     fs2e2: {
-        html: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-en">componentWillMount</span>(){
-        
+        html: `<div class="highlight highlight-source-js-jsx"><pre><span class="pl-en">componentDidMount</span>(){
+
 }</pre></div>`
     },
     fs2e3: {
